@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fechamento de Fim de Ano 2026 · 13º e Férias Coletivas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E1B3D;--navy2:#1A2A5E;--indigo:#2B2F8F;--teal:#01516A;
+  --terra:#AD4402;--terra2:#C9580F;--beige:#E2DFD0;--beige2:#F4F2EA;
+  --black:#161616;--muted:#5E6275;--line:#E4E1D6;--white:#fff;
+  --ok:#1F7A4D;--warn:#B7791F;--bad:#B42318;
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:'Montserrat',Arial,sans-serif;background:var(--beige2);color:var(--black);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
+button,input,select,textarea{font-family:inherit;font-size:14px;color:inherit}
+a{color:var(--indigo)}
+.app{display:grid;grid-template-columns:270px 1fr;min-height:100vh}
+
+/* SIDEBAR */
+.side{background:radial-gradient(420px 320px at 90% 0%,rgba(43,47,143,.9),transparent 65%),linear-gradient(170deg,var(--navy) 0%,var(--navy2) 60%,var(--indigo) 100%);color:#fff;padding:26px 18px;display:flex;flex-direction:column;gap:22px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand .eyebrow{display:inline-block;background:var(--terra);font-size:11px;font-weight:700;letter-spacing:.12em;padding:4px 10px;border-radius:5px}
+.brand h1{font-size:27px;line-height:1.1;margin-top:12px}
+.brand p{color:#C7CBE0;font-size:12.5px;margin-top:6px}
+.company label{font-size:11px;letter-spacing:.1em;font-weight:700;color:var(--beige);display:block;margin-bottom:6px}
+.company .row{display:flex;gap:6px}
+.company select{flex:1;min-width:0;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:9px;padding:9px 10px}
+.company select option{color:var(--black)}
+.icon-btn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:9px;width:38px;cursor:pointer;font-size:16px;flex:none}
+.icon-btn:hover{background:rgba(255,255,255,.22)}
+.company .mini{display:flex;gap:10px;margin-top:6px}
+.company .mini button{background:none;border:0;color:#C7CBE0;font-size:12px;cursor:pointer;text-decoration:underline}
+nav{display:flex;flex-direction:column;gap:6px}
+nav button{display:flex;align-items:center;gap:12px;background:none;border:0;color:#E4E6F2;text-align:left;padding:11px 12px;border-radius:11px;cursor:pointer;font-weight:600;font-size:14.5px}
+nav button:hover{background:rgba(255,255,255,.08)}
+nav button.on{background:#fff;color:var(--navy)}
+nav .ic{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.12);flex:none}
+nav button.on .ic{background:var(--terra);color:#fff}
+nav .ic svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+nav .pct{margin-left:auto;font-size:11.5px;font-weight:700;opacity:.8}
+.side .tools{margin-top:auto;display:flex;flex-direction:column;gap:6px}
+.side .tools button,.side .tools label{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;border-radius:9px;padding:8px 10px;font-size:12.5px;cursor:pointer;text-align:left;font-weight:600}
+.side .tools button:hover,.side .tools label:hover{background:rgba(255,255,255,.16)}
+.side .credit{font-size:11.5px;color:#C7CBE0;border-top:1px solid rgba(255,255,255,.15);padding-top:14px}
+.side .credit a{color:#F0B48A;font-weight:700;text-decoration:none}
+
+/* MAIN */
+main{padding:34px 40px 60px;min-width:0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+.head .tag{font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--terra)}
+.head h2{font-size:36px;color:var(--navy);line-height:1.1;margin-top:4px}
+.head p{color:var(--muted);max-width:640px;margin-top:6px}
+.card{background:#fff;border-radius:var(--r);box-shadow:0 4px 18px rgba(14,27,61,.06);padding:22px 24px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--terra);color:#fff;border:0;border-radius:999px;padding:11px 20px;font-weight:700;cursor:pointer;letter-spacing:.02em;text-decoration:none;font-size:14px}
+.btn:hover{background:var(--terra2)}
+.btn.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--navy2)}
+.btn.navy{background:var(--navy2)}
+.btn.sm{padding:7px 14px;font-size:13px}
+.progress{height:9px;background:var(--beige);border-radius:9px;overflow:hidden}
+.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--terra),var(--indigo));border-radius:9px;transition:width .3s}
+
+/* stats */
+.stat .lbl{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.stat .val{font-family:'DM Serif Display',serif;font-size:40px;color:var(--navy);line-height:1.1;margin:6px 0 10px}
+.stat a{font-size:13px;font-weight:700;color:var(--terra);cursor:pointer;text-decoration:none}
+
+/* checklist */
+.sec{margin-bottom:16px}
+.sec-h{display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none}
+.num{width:34px;height:34px;border-radius:50%;background:var(--terra);color:#fff;display:grid;place-items:center;font-weight:800;flex:none}
+.sec.done .num{background:var(--ok)}
+.sec-h h3{font-size:21px;color:var(--navy);flex:1;line-height:1.2}
+.sec-h .count{font-size:12.5px;font-weight:700;color:var(--muted);background:var(--beige2);padding:4px 10px;border-radius:999px}
+.sec-h .chev{transition:transform .2s;color:var(--muted)}
+.sec.closed .chev{transform:rotate(-90deg)}
+.sec.closed .sec-b{display:none}
+.sec-b{margin-top:14px}
+.item{display:flex;gap:12px;padding:11px 4px;border-top:1px solid var(--beige2);align-items:flex-start}
+.item input{appearance:none;width:22px;height:22px;border:2px solid var(--navy2);border-radius:6px;flex:none;cursor:pointer;margin-top:1px;display:grid;place-items:center;background:#fff}
+.item input:checked{background:var(--navy2)}
+.item input:checked::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.item label{cursor:pointer;flex:1}
+.item.ok label{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(94,98,117,.5)}
+.item b{color:var(--navy2)}
+.item.ok b{color:var(--muted)}
+.item small{display:block;color:var(--muted);font-size:12.5px;margin-top:2px}
+.note-area{width:100%;margin-top:10px;border:1.5px dashed var(--line);border-radius:10px;padding:10px 12px;min-height:46px;resize:vertical;background:var(--beige2)}
+.note-area:focus{outline:none;border-color:var(--indigo);background:#fff}
+.tip{background:var(--beige2);border-radius:10px;padding:12px 14px;font-size:13.5px;margin-top:10px}
+.tip b{color:var(--terra)}
+
+/* forms */
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 16px}
+.f{display:flex;flex-direction:column;gap:5px}
+.f.span2{grid-column:span 2}.f.span3{grid-column:1/-1}
+.f label{font-size:12px;font-weight:700;color:var(--navy2);letter-spacing:.02em}
+.f input,.f select,.f textarea{border:1.5px solid var(--line);border-radius:9px;padding:9px 11px;background:#fff;width:100%}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--indigo)}
+.f small{color:var(--muted);font-size:11.5px}
+.tabs{display:flex;gap:6px;background:#fff;padding:5px;border-radius:999px;box-shadow:0 4px 18px rgba(14,27,61,.06);width:max-content;max-width:100%;overflow:auto;margin-bottom:20px}
+.tabs button{border:0;background:none;padding:9px 18px;border-radius:999px;font-weight:700;cursor:pointer;color:var(--muted);white-space:nowrap}
+.tabs button.on{background:var(--navy2);color:#fff}
+
+/* alerts */
+.res{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.res .box{background:var(--beige2);border-radius:12px;padding:14px}
+.res .box .k{font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+.res .box .v{font-family:'DM Serif Display',serif;font-size:24px;color:var(--navy);margin-top:4px;line-height:1.15}
+.res .box .s{font-size:12.5px;color:var(--muted);margin-top:4px}
+.alerts{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.al{display:flex;gap:10px;align-items:flex-start;padding:11px 14px;border-radius:10px;font-size:13.5px}
+.al.ok{background:#E7F4EC;color:#14532D}.al.warn{background:#FDF3E1;color:#7A4B07}.al.bad{background:#FDE8E7;color:#7F1D1D}.al.info{background:#ECEEF8;color:var(--navy2)}
+.al .dot{width:9px;height:9px;border-radius:50%;margin-top:6px;flex:none;background:currentColor}
+
+/* table */
+.tbl-wrap{overflow:auto;border-radius:12px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:1180px;font-size:13px;background:#fff}
+th{background:var(--navy);color:#fff;font-weight:700;text-align:left;padding:10px 8px;font-size:12px;white-space:nowrap;position:sticky;top:0}
+td{padding:6px 6px;border-bottom:1px solid var(--beige2);vertical-align:middle}
+td input,td select{width:100%;border:1.5px solid transparent;border-radius:7px;padding:6px 7px;background:var(--beige2)}
+td input:focus,td select:focus{outline:none;border-color:var(--indigo);background:#fff}
+td.calc{font-weight:700;color:var(--navy2);white-space:nowrap;text-align:right}
+td.calc.terra{color:var(--terra)}
+tfoot td{font-weight:800;background:var(--beige2);color:var(--navy)}
+.del{background:none;border:0;color:var(--bad);cursor:pointer;font-size:18px;padding:0 6px}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;background:var(--beige2);color:var(--muted)}
+
+/* calendar */
+.cal-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.cal-top h3{font-size:28px;color:var(--navy);min-width:220px}
+.cal-wrap{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal .dow{font-size:11.5px;font-weight:700;color:var(--muted);text-align:center;padding:4px 0;letter-spacing:.05em}
+.day{background:#fff;border-radius:10px;min-height:104px;padding:6px 6px 8px;cursor:pointer;border:1.5px solid transparent;display:flex;flex-direction:column;gap:3px;overflow:hidden}
+.day:hover{border-color:var(--indigo)}
+.day.out{background:transparent;opacity:.45}
+.day.rest{background:#F8F6F0}
+.day.today{border-color:var(--terra)}
+.day .n{font-weight:800;font-size:13px;color:var(--navy);display:flex;justify-content:space-between;align-items:center}
+.day .n em{font-style:normal;font-size:9.5px;font-weight:700;color:var(--terra);text-align:right;line-height:1.1;max-width:70%}
+.ev{font-size:11px;font-weight:600;line-height:1.25;padding:3px 6px;border-radius:6px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ev.done{opacity:.45;text-decoration:line-through}
+.more{font-size:11px;color:var(--muted);font-weight:700}
+.c-13{background:var(--terra)}.c-ferias{background:var(--teal)}.c-guias{background:var(--indigo)}.c-esocial{background:var(--navy2)}.c-feriado{background:#8C8676}.c-nota{background:#7A5AA6}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.legend label{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;cursor:pointer;background:#fff;padding:5px 10px;border-radius:999px;border:1px solid var(--line)}
+.legend i{width:10px;height:10px;border-radius:50%}
+.agenda .it{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--beige2);cursor:pointer}
+.agenda .it:last-child{border:0}
+.agenda .d{font-family:'DM Serif Display',serif;font-size:22px;color:var(--navy);min-width:46px;line-height:1}
+.agenda .d small{display:block;font-family:'Montserrat';font-size:10.5px;color:var(--muted);font-weight:700;margin-top:3px}
+.agenda .t{font-size:13.5px;font-weight:600}
+.agenda .t span{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
+.agenda .t small{display:block;color:var(--muted);font-weight:500;font-size:12px}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(14,27,61,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+.modal.on{display:flex}
+.modal .card{width:min(520px,100%);max-height:92vh;overflow:auto}
+.modal h3{font-size:26px;color:var(--navy);margin-bottom:14px}
+.modal .acts{display:flex;gap:8px;justify-content:space-between;margin-top:18px;flex-wrap:wrap}
+.chk{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;margin-top:10px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:11px 20px;border-radius:999px;font-weight:600;font-size:13.5px;opacity:0;transition:.25s;z-index:60;pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%)}
+.cta-band{background:radial-gradient(400px 200px at 90% 0%,rgba(43,47,143,.9),transparent 65%),linear-gradient(150deg,var(--navy),var(--navy2));color:#fff;border-radius:var(--r);padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.cta-band h3{font-size:24px}
+.cta-band p{color:#C7CBE0;font-size:13.5px}
+.mtop{margin-top:18px}
+.muted{color:var(--muted)}
+.navlbl{font-size:11px;letter-spacing:.12em;font-weight:700;color:var(--beige);margin:12px 12px 2px}
+.h3c{font-size:22px;color:var(--navy);margin-bottom:12px}
+.exs{display:flex;flex-wrap:wrap;gap:8px}
+.exbtn{border:1.5px solid var(--line);background:var(--beige2);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer;color:var(--navy2)}
+.exbtn:hover{border-color:var(--terra);color:var(--terra)}
+.lbl2{font-size:12px;font-weight:700;color:var(--navy2);display:block;margin-bottom:8px}
+.mchips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.mchip{border:0;border-radius:8px;padding:8px 0;width:64px;font-weight:700;font-size:13px;cursor:pointer;background:var(--beige);color:var(--muted)}
+.mchip.on{background:var(--navy2);color:#fff}
+.mchip.off{background:#fff;color:var(--bad);border:1.5px dashed var(--bad);text-decoration:line-through}
+.crow{display:grid;grid-template-columns:1fr 150px 150px 170px;gap:12px;align-items:center;padding:11px 0;border-top:1px solid var(--beige2)}
+.crow:first-of-type{border-top:0}
+.crow .cl b{font-size:14.5px;color:var(--navy)}
+.crow .cl small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.crow .cv{font-weight:800;color:var(--navy2);text-align:right;font-size:15px;white-space:nowrap}
+.crow.tot{background:var(--beige2);border-radius:12px;padding:12px 14px;margin-top:6px;border:0}
+.crow.tot .cv{color:var(--terra);font-size:18px}
+.hid{color:var(--line);letter-spacing:2px}
+.seu{border:1.5px solid var(--line);border-radius:9px;padding:8px 10px;text-align:right;width:100%;background:#fff}
+.seu:focus{outline:none;border-color:var(--indigo)}
+.st{font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;display:inline-block}
+.st.ok{background:#E7F4EC;color:#14532D}.st.bad{background:#FDE8E7;color:#7F1D1D}
+@media (max-width:860px){.crow{grid-template-columns:1fr 1fr}.crow .cl{grid-column:1/-1}.crow .cv{text-align:left}.mchip{width:calc(25% - 5px)}}
+.mobile-bar{display:none}
+
+@media (max-width:1100px){.g4{grid-template-columns:1fr 1fr}.res{grid-template-columns:1fr 1fr}.cal-wrap{grid-template-columns:1fr}}
+@media (max-width:860px){
+  .app{grid-template-columns:1fr}
+  .side{position:fixed;inset:0 auto 0 0;width:280px;transform:translateX(-100%);transition:transform .25s;z-index:40}
+  .side.open{transform:none;box-shadow:0 0 0 100vmax rgba(14,27,61,.5)}
+  .mobile-bar{display:flex;align-items:center;gap:12px;background:var(--navy);color:#fff;padding:12px 16px;position:sticky;top:0;z-index:30}
+  .mobile-bar button{background:rgba(255,255,255,.12);border:0;color:#fff;border-radius:9px;padding:7px 11px;font-size:18px}
+  .mobile-bar b{font-family:'DM Serif Display';font-weight:400;font-size:19px}
+  main{padding:22px 16px 50px}
+  .head h2{font-size:28px}
+  .g2,.g3,.g4,.fgrid,.res{grid-template-columns:1fr}
+  .f.span2{grid-column:auto}
+  .day{min-height:64px}.ev{font-size:0;height:6px;padding:0}
+  .day .n em{display:none}
+}
+@media print{
+  .side,.mobile-bar,.tabs,.btn,.cal-top .btn,.no-print{display:none!important}
+  .app{display:block}main{padding:0}
+  body{background:#fff}.card{box-shadow:none;border:1px solid var(--line)}
+  .sec.closed .sec-b{display:block}
+}
+</style>
+</head>
+<body>
+<div class="mobile-bar"><button id="menuBtn" aria-label="Abrir menu">☰</button><b>Fechamento 2026</b></div>
+<div class="app">
+  <aside class="side" id="side">
+    <div class="brand">
+      <span class="eyebrow">FIM DE ANO 2026</span>
+      <h1>Fechamento do DP: 13º e Férias Coletivas</h1>
+      <p>Checklists, planejador de férias e calendário em um só lugar.</p>
+    </div>
+    <div class="company">
+      <label for="companySel">EMPRESA / CLIENTE</label>
+      <div class="row"><select id="companySel"></select><button class="icon-btn" id="addCompany" title="Nova empresa">+</button></div>
+      <div class="mini"><button id="renCompany">Renomear</button><button id="delCompany">Excluir</button></div>
+    </div>
+    <nav id="nav">
+      <button data-v="painel"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></span>Painel</button>
+      <button data-v="13"><span class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></svg></span>Checklist do 13º<span class="pct" id="pct13"></span></button>
+      <button data-v="ferias"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-9 9h18a9 9 0 0 0-9-9z"/><path d="M12 12v8a2 2 0 0 0 4 0"/></svg></span>Férias Coletivas<span class="pct" id="pctFer"></span></button>
+      <button data-v="cal"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>Calendário</button>
+    <div class="navlbl">HORA PRÁTICA</div>
+      <button data-v="p13"><span class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 19h2M12 19h2M16 15v4"/></svg></span>Prática 13º</button>
+      <button data-v="pfer"><span class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 11h2M12 11h2M8 15h2M12 15h2M8 19h2M12 19h2M16 11v8"/></svg></span>Prática de férias</button>
+    </nav>
+    <div class="tools">
+      <button id="printBtn">Imprimir esta tela</button>
+      <button id="exportBtn">Exportar backup (.json)</button>
+      <label>Importar backup<input type="file" id="importFile" accept=".json,application/json" hidden></label>
+    </div>
+    <div class="credit">Criado por <b>Vanessa Costa Silva</b> · <a href="https://www.instagram.com/vanessasilva.dp/" target="_blank" rel="noopener">@vanessasilva.dp</a><br>Os dados ficam salvos apenas neste navegador.</div>
+  </aside>
+  <main id="main"></main>
+</div>
+
+<div class="modal" id="evModal" role="dialog" aria-modal="true">
+  <div class="card">
+    <h3 id="evTitle">Novo compromisso</h3>
+    <div class="fgrid" style="grid-template-columns:1fr 1fr">
+      <div class="f span3"><label for="evName">Título</label><input id="evName" placeholder="Ex.: Enviar folha para aprovação do cliente"></div>
+      <div class="f"><label for="evDate">Data</label><input type="date" id="evDate"></div>
+      <div class="f"><label for="evCat">Categoria</label><select id="evCat"></select></div>
+      <div class="f span3"><label for="evNotes">Anotações</label><textarea id="evNotes" rows="4" placeholder="Detalhes, responsáveis, valores, protocolos..."></textarea></div>
+    </div>
+    <label class="chk"><input type="checkbox" id="evDone"> Marcar como concluído</label>
+    <div class="acts">
+      <button class="btn ghost sm" id="evDel" style="color:var(--bad)">Excluir</button>
+      <div style="display:flex;gap:8px"><button class="btn ghost sm" id="evCancel">Cancelar</button><button class="btn sm" id="evSave">Salvar</button></div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ================= DADOS FIXOS ================= */
+const IMERSAO_URL = "https://sun.eduzz.com/D0R8KJEJ9Y";
+const CATS = {"13":"13º salário","ferias":"Férias coletivas","guias":"Guias e pagamentos","esocial":"eSocial / DCTFWeb","feriado":"Feriado","nota":"Anotação"};
+const HOLIDAYS = {
+ "2026-01-01":"Confraternização Universal","2026-04-03":"Sexta-feira Santa","2026-04-21":"Tiradentes","2026-05-01":"Dia do Trabalho","2026-09-07":"Independência","2026-10-12":"N. Sra. Aparecida","2026-11-02":"Finados","2026-11-15":"Proclamação da República","2026-11-20":"Consciência Negra","2026-12-25":"Natal",
+ "2027-01-01":"Confraternização Universal","2027-03-26":"Sexta-feira Santa","2027-04-21":"Tiradentes","2027-05-01":"Dia do Trabalho","2027-09-07":"Independência","2027-10-12":"N. Sra. Aparecida","2027-11-02":"Finados","2027-11-15":"Proclamação da República","2027-11-20":"Consciência Negra","2027-12-25":"Natal"
+};
+const SEED = [
+ ["2026-11-20","Feriado: Consciência Negra","feriado","Feriado nacional. Considere no DSR das horas extras de novembro."],
+ ["2026-11-30","Pagar a 1ª parcela do 13º","13","Prazo legal (segunda-feira). 50% sem INSS e IRRF; FGTS na competência 11/2026."],
+ ["2026-12-04","Comunicar férias coletivas (início 21/12)","ferias","Prazo legal de 15 dias vence em 06/12 (domingo). Enviar ao MTE (exceto ME/EPP), sindicato e afixar aviso."],
+ ["2026-12-05","5º dia útil: salário de novembro","guias","Sábado conta como dia útil. Se o banco não processar, antecipe para 04/12."],
+ ["2026-12-15","eSocial e DCTFWeb de novembro","esocial","Fechamento dos eventos periódicos (S-1200/S-1210/S-1299) da competência 11/2026."],
+ ["2026-12-18","Pagar a 2ª parcela do 13º","13","Prazo legal 20/12 cai no domingo: pague até sexta-feira, 18/12."],
+ ["2026-12-18","eSocial anual + DCTFWeb anual + DARF INSS do 13º","esocial","Folha anual (rubricas 5001/9214) e DARF do INSS do 13º. Prazo do dia 20 antecipado."],
+ ["2026-12-18","FGTS competência 11/2026 (inclui 1ª parcela)","guias","FGTS Digital: vencimento 20/12 cai no domingo."],
+ ["2026-12-18","DARF INSS/IRRF da competência 11/2026","guias","Vencimento no dia 20 antecipado para sexta-feira."],
+ ["2026-12-18","Pagar férias coletivas que começam em 21/12","ferias","Art. 145: até 2 dias antes do início (19/12 é sábado)."],
+ ["2026-12-21","Início sugerido das férias coletivas","ferias","Segunda-feira. 18 e 19/12 são vedados (antecedem o domingo, art. 134, §3º)."],
+ ["2026-12-25","Feriado: Natal","feriado","Verifique na convenção se o feriado dentro das coletivas deve ser compensado ou pago."],
+ ["2027-01-01","Feriado: Confraternização Universal","feriado","Verifique o tratamento na convenção coletiva."],
+ ["2027-01-04","Retorno das férias coletivas (21/12 a 03/01)","ferias","Novo período aquisitivo para quem gozou férias proporcionais."],
+ ["2027-01-07","5º dia útil: salário de dezembro","guias","Contando o sábado 02/01 como dia útil. Inclui licença remunerada das coletivas."],
+ ["2027-01-08","Ajuste do 13º (variáveis)","13","Prazo legal 10/01 cai no domingo. Rubrica 5005, na folha de dezembro ou complementar."],
+ ["2027-01-15","eSocial e DCTFWeb de dezembro + S-2230 das coletivas","esocial","S-2230 de início das férias de dezembro: até o dia 15 do mês seguinte."],
+ ["2027-01-20","FGTS 12/2026 (inclui 2ª parcela) e DARF IRRF do 13º","guias","Quarta-feira."],
+ ["2027-01-31","Prazo do empregado para pedir o 13º junto com as férias de 2027","13","Art. 79 do Decreto 10.854/2021: pedido no mês de janeiro."],
+ ["2027-02-15","S-2230: término das férias coletivas (retorno em janeiro)","esocial","Até o dia 15 do mês seguinte ao retorno."]
+];
+
+const CK13 = [
+ {id:"a",t:"Base de empregados",items:[
+  ["Listei todos os empregados ativos, inclusive <b>aprendizes, domésticos e rurais</b>"],
+  ["Conferi as <b>datas de admissão</b> de quem entrou em 2026"],
+  ["Separei os <b>desligados do ano</b>","O 13º proporcional já foi pago na rescisão (art. 82 do Decreto 10.854/2021)."],
+  ["Identifiquei os <b>intermitentes</b>","O 13º proporcional é pago ao fim de cada período de prestação de serviço."],
+  ["Apliquei o <b>reajuste ou dissídio</b> do ano","A 2ª parcela usa o salário de dezembro."],
+  ["Conferi quem já recebeu o <b>adiantamento nas férias</b>","Pedido feito em janeiro (art. 79). Não pagar de novo em novembro."]
+ ]},
+ {id:"b",t:"Avos de direito",items:[
+  ["Contei <b>1/12 por mês com 15 dias ou mais</b> trabalhados, mês a mês do contrato","Ex.: admitido em 20/07/2026 → julho tem 12 dias → 5/12 avos."],
+  ["Retirei meses com <b>faltas injustificadas</b> que deixaram menos de 15 dias trabalhados"],
+  ["Retirei os meses de <b>afastamento pelo INSS</b>","Os 15 primeiros dias pagos pela empresa contam; o período pago pelo INSS não."],
+  ["Conferi as <b>gestantes em licença-maternidade</b>","13º pago pela empresa; a parte do período da licença é compensada na DCTFWeb."],
+  ["Revisei <b>acidente de trabalho</b> e <b>serviço militar</b> conforme a regra aplicável e a convenção"]
+ ]},
+ {id:"c",t:"Médias e adicionais",items:[
+  ["Incluí as <b>variáveis</b>: horas extras, DSR sobre HE, adicional noturno e comissões"],
+  ["Incluí <b>insalubridade e periculosidade</b> que integram o salário"],
+  ["1ª parcela: médias de <b>janeiro a outubro</b> (÷ 10)"],
+  ["2ª parcela: médias de <b>janeiro a novembro</b> (÷ 11)"],
+  ["Conferi se a <b>convenção coletiva</b> prevê outra regra de média ou valores mínimos"]
+ ]},
+ {id:"d",t:"1ª parcela · até 30/11/2026",items:[
+  ["Calculei <b>(salário + médias) ÷ 12 × avos ÷ 2</b>"],
+  ["<b>Sem desconto</b> de INSS e IRRF"],
+  ["FGTS de <b>8%</b> (2% para aprendiz) na competência 11/2026","Recolhimento até 18/12/2026 (o dia 20 cai no domingo)."],
+  ["S-1200 de novembro: natureza <b>5504</b>, incidência de FGTS <b>código 12</b>"],
+  ["Enviei o arquivo ao banco e arquivei o <b>recibo</b> da 1ª parcela"]
+ ]},
+ {id:"e",t:"2ª parcela · até 18/12/2026",items:[
+  ["Calculei o <b>13º integral</b>: (salário de dezembro + médias) ÷ 12 × avos"],
+  ["Descontei a <b>1ª parcela</b> já paga"],
+  ["Calculei o <b>INSS do 13º separado</b> da folha mensal, pela tabela 2026","Faixas: até 1.621,00 (7,5%) · até 2.902,84 (9%) · até 4.354,27 (12%) · até 8.475,55 (14%)."],
+  ["Calculei o <b>IRRF do 13º separado</b>, com o mais vantajoso entre desconto simplificado (R$ 607,20) e INSS + dependentes (R$ 189,59 cada)"],
+  ["Apliquei o <b>redutor da Lei 15.270/2025</b> sobre o valor bruto do 13º","Até R$ 5.000: imposto zera · R$ 5.000,01 a 7.350: redução = 978,62 − 0,133145 × bruto · acima: sem redução."],
+  ["Garanti que <b>não há desconto do consignado</b> (Crédito do Trabalhador) na folha anual do 13º"],
+  ["Conferi a <b>pensão alimentícia</b>, quando a decisão judicial incluir o 13º"],
+  ["Folha anual do eSocial: rubricas <b>5001</b> e <b>9214</b>, incidências <b>código 12</b>"]
+ ]},
+ {id:"f",t:"Ajuste das médias · até 08/01/2027",items:[
+  ["Recalculei a média com <b>janeiro a dezembro</b> (÷ 12)"],
+  ["Comparei com o pago na 2ª parcela e apurei a <b>diferença</b>"],
+  ["Lancei a diferença na folha de dezembro ou complementar: rubrica <b>5005</b>, incidências <b>código 12</b>"],
+  ["Diferença negativa: avaliei a <b>compensação</b> (art. 77, parágrafo único)"]
+ ]},
+ {id:"g",t:"Guias e obrigações",items:[
+  ["<b>18/12/2026</b> · FGTS da competência 11/2026 (inclui a 1ª parcela)"],
+  ["<b>18/12/2026</b> · eSocial anual fechado, DCTFWeb anual transmitida e DARF do INSS do 13º"],
+  ["<b>20/01/2027</b> · FGTS da competência 12/2026 (inclui a 2ª parcela)"],
+  ["<b>20/01/2027</b> · DARF do IRRF do 13º, informado no S-1210 de dezembro"],
+  ["Conferi os <b>totalizadores do eSocial</b> com a folha antes de transmitir a DCTFWeb"]
+ ]},
+ {id:"h",t:"Pagamento e arquivo",items:[
+  ["Enviei o arquivo ao banco com <b>antecedência</b> (prazos vencem na sexta-feira)"],
+  ["Gerei <b>recibos ou holerites</b> e arquivei os comprovantes"],
+  ["Comuniquei o cliente ou o financeiro sobre <b>valores e datas</b> das guias"],
+  ["Registrei os <b>pontos de atenção</b> para o próximo ano"]
+ ]}
+];
+const CKFER = [
+ {id:"a",t:"Planejamento",items:[
+  ["Defini a <b>abrangência</b>: empresa toda, estabelecimentos ou setores (art. 139)"],
+  ["Defini o <b>período</b>: no máximo 2 períodos por ano, cada um com <b>10 dias corridos ou mais</b>"],
+  ["Conferi que o <b>início não cai nos 2 dias antes de DSR ou feriado</b> (art. 134, §3º)","Em 2026: 18 e 19/12 são vedados (antecedem o domingo 20/12); 23 e 24/12 antecedem o Natal."],
+  ["Li a <b>convenção coletiva</b>: contagem dos dias e tratamento de 25/12 e 01/01","Algumas normas mandam compensar ou pagar esses feriados quando caem nas coletivas."],
+  ["Verifiquei se a convenção prevê <b>abono pecuniário</b> nas coletivas (art. 143, §2º)"],
+  ["Levantei quem tem <b>férias vencidas</b> e o prazo do período concessivo de cada um"]
+ ]},
+ {id:"b",t:"Empregados em situações especiais",items:[
+  ["Separei os <b>admitidos há menos de 12 meses</b>: férias proporcionais + licença remunerada do excedente (art. 140)"],
+  ["Separei os <b>admitidos há menos de 15 dias</b>: licença remunerada durante todo o período"],
+  ["Retirei do comunicado os empregados em <b>atestado ou afastamento</b> e coloquei em licença remunerada"],
+  ["Consultei as <b>gestantes</b> com possibilidade de licença-maternidade durante as coletivas"],
+  ["Planejei <b>férias individuais emendadas</b> às coletivas, com aviso dos dois períodos (arts. 135 e 139, §3º)"]
+ ]},
+ {id:"c",t:"Comunicações · 15 dias antes",items:[
+  ["Comuniquei o <b>Ministério do Trabalho</b> pelo gov.br (exceto ME e EPP)","Serviço: gov.br/pt-br/servicos/comunicar-ferias-coletivas"],
+  ["Enviei <b>cópia ao sindicato</b> da categoria, mesmo sem contribuição"],
+  ["<b>Afixei o aviso</b> de férias coletivas nos locais de trabalho"],
+  ["Arquivei <b>protocolos e comprovantes</b> de envio"]
+ ]},
+ {id:"d",t:"Cálculos",items:[
+  ["Calculei as <b>médias de variáveis</b> (art. 142)","Comissões: média dos 12 meses anteriores à concessão. Horas variáveis: média do período aquisitivo."],
+  ["Calculei <b>férias + 1/3</b> com o salário da data da concessão"],
+  ["Calculei os dias <b>proporcionais</b> conforme avos e faltas do período"],
+  ["Calculei a <b>licença remunerada</b> de quem não tem dias suficientes"],
+  ["Apliquei <b>INSS, IRRF (com o redutor de 2026) e FGTS</b>"]
+ ]},
+ {id:"e",t:"Pagamento",items:[
+  ["Paguei as férias <b>até 2 dias antes do início</b> (art. 145)","Coletivas a partir de 21/12/2026: pagar até 18/12 (19/12 é sábado)."],
+  ["Colhi a <b>assinatura do recibo</b> com início e término das férias"],
+  ["Programei a <b>licença remunerada</b> na folha do mês (até o 5º dia útil seguinte)"]
+ ]},
+ {id:"f",t:"eSocial e encerramento",items:[
+  ["Enviei o <b>S-2230</b> de início até o dia 15 do mês seguinte"],
+  ["Enviei o <b>S-2230</b> de término até o dia 15 do mês seguinte ao retorno"],
+  ["Lancei as rubricas de <b>férias e licença remunerada</b> no S-1200"],
+  ["Atualizei o <b>novo período aquisitivo</b> de quem gozou férias proporcionais"],
+  ["Em caso de <b>cancelamento</b>: comuniquei MTE e sindicato, avisei os empregados e ressarci prejuízos (PN 116 do TST)"]
+ ]}
+];
+const FALTAS = [["0-5","Até 5 faltas",2.5,30],["6-14","6 a 14 faltas",2,24],["15-23","15 a 23 faltas",1.5,18],["24-32","24 a 32 faltas",1,12],["33+","Mais de 32 (perde o direito)",0,0]];
+
+/* ================= UTIL ================= */
+const $ = s=>document.querySelector(s);
+const uid = ()=>Math.random().toString(36).slice(2,10);
+const pad = n=>String(n).padStart(2,"0");
+const iso = d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+const parse = s=>{ if(!s) return null; const [y,m,d]=s.split("-").map(Number); return new Date(y,m-1,d); };
+const br = d=>d? pad(d.getDate())+"/"+pad(d.getMonth()+1)+"/"+d.getFullYear() : "—";
+const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x;};
+const DOW=["domingo","segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sábado"];
+const DOWS=["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"];
+const MONTHS=["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+const money = v=> (isFinite(v)? v:0).toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const num = v=>{const n=parseFloat(String(v).replace(",","."));return isFinite(n)?n:0;};
+const esc = s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("on"),2200);}
+
+/* ================= ESTADO ================= */
+const KEY="dp-fechamento-2026-v1";
+function newCompany(name){
+  return {name, ck13:{}, n13:{}, d13:{}, ckFer:{}, nFer:{}, fer:{inicio:"2026-12-21",dias:14,dsr:"0",porte:"normal",abrang:"Empresa toda",feriadosTrat:"Conforme convenção coletiva"}, emps:[],
+    events: SEED.map(e=>({id:uid(),date:e[0],title:e[1],cat:e[2],notes:e[3],done:false,src:e[2]==="ferias"?"seedfer":undefined}))};
+}
+let S;
+function load(){
+  try{ const raw=localStorage.getItem(KEY); if(raw){ S=JSON.parse(raw); } }catch(e){}
+  if(!S||!S.companies){ const id=uid(); S={active:id,view:"painel",companies:{[id]:newCompany("Minha empresa")}}; }
+  if(!S.companies[S.active]) S.active=Object.keys(S.companies)[0];
+}
+function save(){ try{ localStorage.setItem(KEY,JSON.stringify(S)); }catch(e){} updateSide(); }
+const C=()=>S.companies[S.active];
+
+/* ================= DATAS / REGRAS ================= */
+function userHolidays(){ const out={}; (C().fer.feriadosMun||"").split(/[\s,;]+/).forEach(t=>{const m=t.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/); if(m) out[m[3]+"-"+pad(m[2])+"-"+pad(m[1])]="Feriado informado";}); return out; }
+function holidayName(d){ const k=iso(d); return HOLIDAYS[k]||userHolidays()[k]||null; }
+function isRest(d,dsr){ return d.getDay()===Number(dsr) || !!holidayName(d); }
+function isBank(d){ const w=d.getDay(); return w!==0 && w!==6 && !holidayName(d); }
+function prevBank(d){ let x=new Date(d); while(!isBank(x)) x=addDays(x,-1); return x; }
+function avos(adm, ref){ // meses de 12 avos entre admissão e ref (inclusive)
+  if(!adm||!ref||adm>ref) return 0;
+  let n=0, cur=new Date(adm);
+  while(true){ const next=new Date(cur.getFullYear(),cur.getMonth()+1,cur.getDate()); const end=addDays(next,-1);
+    if(end<=ref){ n++; cur=next; if(n>=12) break; } else { const rem=Math.round((ref-cur)/864e5)+1; if(rem>=15) n++; break; } }
+  return Math.min(n,12);
+}
+
+/* ================= RENDER ================= */
+function setView(v){ S.view=v; save(); render(); $("#side").classList.remove("open"); window.scrollTo(0,0); }
+function updateSide(){
+  const sel=$("#companySel"); sel.innerHTML=Object.entries(S.companies).map(([id,c])=>`<option value="${id}" ${id===S.active?"selected":""}>${esc(c.name)}</option>`).join("");
+  document.querySelectorAll("#nav button").forEach(b=>b.classList.toggle("on",b.dataset.v===S.view));
+  $("#pct13").textContent=pct(CK13,C().ck13)+"%"; $("#pctFer").textContent=pct(CKFER,C().ckFer)+"%";
+}
+function counts(list,state){ let t=0,d=0; list.forEach(s=>s.items.forEach((_,i)=>{t++; if(state[s.id+i]) d++;})); return [d,t]; }
+function pct(list,state){ const [d,t]=counts(list,state); return t?Math.round(d/t*100):0; }
+function render(){
+  updateSide();
+  const v=S.view, m=$("#main");
+  if(v==="13") m.innerHTML=view13();
+  else if(v==="ferias") m.innerHTML=viewFerias();
+  else if(v==="cal") m.innerHTML=viewCal();
+  else if(v==="p13") m.innerHTML=viewP13();
+  else if(v==="pfer") m.innerHTML=viewPF();
+  else m.innerHTML=viewPainel();
+  bind(); if(v==="p13"||v==="pfer") bindPratica();
+}
+
+function head(tag,title,desc,extra=""){ return `<div class="head"><div><div class="tag">${tag}</div><h2>${title}</h2>${desc?`<p>${desc}</p>`:""}</div>${extra}</div>`; }
+
+function viewPainel(){
+  const c=C(); const [d13,t13]=counts(CK13,c.ck13), [dF,tF]=counts(CKFER,c.ckFer);
+  const today=iso(new Date());
+  const up=c.events.filter(e=>e.date>=today && !e.done).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,7);
+  const f=feriasCalc();
+  return head("PAINEL · "+esc(c.name).toUpperCase(),"Seu fechamento de fim de ano","Acompanhe o andamento das duas conferências, os próximos prazos e o resumo das férias coletivas.")+
+  `<div class="grid g4">
+    <div class="card stat"><div class="lbl">Checklist do 13º</div><div class="val">${pct(CK13,c.ck13)}%</div><div class="progress"><i style="width:${pct(CK13,c.ck13)}%"></i></div><p class="muted mtop" style="margin-top:10px;font-size:13px">${d13} de ${t13} itens · <a onclick="setView('13')">abrir</a></p></div>
+    <div class="card stat"><div class="lbl">Checklist de férias</div><div class="val">${pct(CKFER,c.ckFer)}%</div><div class="progress"><i style="width:${pct(CKFER,c.ckFer)}%"></i></div><p class="muted" style="margin-top:10px;font-size:13px">${dF} de ${tF} itens · <a onclick="setView('ferias')">abrir</a></p></div>
+    <div class="card stat"><div class="lbl">Coletivas</div><div class="val" style="font-size:26px;margin-top:12px">${f.ini?br(f.ini)+" a "+br(f.fim):"Não definidas"}</div><p class="muted" style="font-size:13px">${f.ini?f.dias+" dias · retorno "+br(f.ret):"Preencha em Férias Coletivas"}</p></div>
+    <div class="card stat"><div class="lbl">Empregados nas coletivas</div><div class="val">${c.emps.length}</div><p class="muted" style="font-size:13px">${c.emps.length?"Bruto estimado: "+money(empTotals().total):"Cadastre na aba Empregados"}</p></div>
+  </div>
+  <div class="grid g2 mtop">
+    <div class="card"><h3 class="serif" style="font-size:24px;color:var(--navy);margin-bottom:8px">Próximos prazos</h3>
+      <div class="agenda">${up.length?up.map(agendaItem).join(""):`<p class="muted">Nenhum prazo pendente.</p>`}</div>
+      <button class="btn ghost sm mtop" onclick="setView('cal')">Ver calendário completo</button></div>
+    <div class="card"><h3 class="serif" style="font-size:24px;color:var(--navy);margin-bottom:8px">Alertas das férias coletivas</h3>
+      <div class="alerts" style="margin-top:4px">${f.alerts.length?f.alerts.map(a=>`<div class="al ${a[0]}"><span class="dot"></span><span>${a[1]}</span></div>`).join(""):`<p class="muted">Informe a data de início e os dias em Férias Coletivas → Dados das coletivas.</p>`}</div></div>
+  </div>
+  <div class="cta-band mtop no-print"><div><h3>Quer fazer tudo isso com segurança?</h3><p>Imersão Prática 13º Salário e Férias Coletivas 2026, com Vanessa Silva · ao vivo no Google Meet · gravação por 60 dias.</p></div><a class="btn" href="${IMERSAO_URL}" target="_blank" rel="noopener">Conhecer a imersão</a></div>`;
+}
+function agendaItem(e){ const d=parse(e.date); return `<div class="it" data-ev="${e.id}"><div class="d">${pad(d.getDate())}<small>${MONTHS[d.getMonth()].slice(0,3).toUpperCase()}</small></div><div class="t"><span class="c-${e.cat}"></span>${esc(e.title)}<small>${DOW[d.getDay()]}${e.notes?" · "+esc(e.notes).slice(0,90)+(e.notes.length>90?"…":""):""}</small></div></div>`; }
+
+function checklistHTML(list,stateKey,notesKey){
+  const st=C()[stateKey], nt=C()[notesKey];
+  return list.map((s,si)=>{
+    const done=s.items.filter((_,i)=>st[s.id+i]).length, all=done===s.items.length;
+    return `<div class="card sec ${all?"done":""} ${(S.closed||{})[stateKey+s.id]?"closed":""}" data-sec="${stateKey+s.id}">
+      <div class="sec-h"><span class="num">${all?"✓":si+1}</span><h3>${s.t}</h3><span class="count">${done}/${s.items.length}</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+      <div class="sec-b">${s.items.map((it,i)=>{const id=stateKey+"-"+s.id+i; const on=!!st[s.id+i]; return `<div class="item ${on?"ok":""}"><input type="checkbox" id="${id}" data-ck="${stateKey}" data-k="${s.id+i}" ${on?"checked":""}><label for="${id}">${it[0]}${it[1]?`<small>${it[1]}</small>`:""}</label></div>`;}).join("")}
+      <textarea class="note-area" data-note="${notesKey}" data-k="${s.id}" placeholder="Anotações desta etapa (pendências, valores, quem conferiu...)">${esc(nt[s.id]||"")}</textarea></div></div>`;
+  }).join("");
+}
+
+function view13(){
+  const c=C(), d=c.d13;
+  return head("CHECKLIST · 13º SALÁRIO 2026","Conferência do 13º salário","Marque cada item conforme conferir. Tudo fica salvo automaticamente para esta empresa.",`<div style="min-width:240px"><div class="progress"><i style="width:${pct(CK13,c.ck13)}%"></i></div><p class="muted" style="font-size:13px;margin-top:6px">${pct(CK13,c.ck13)}% concluído</p></div>`)+
+  `<div class="card" style="margin-bottom:16px"><h3 class="serif" style="font-size:22px;color:var(--navy);margin-bottom:12px">Dados do fechamento</h3>
+   <div class="fgrid">
+    ${fld("d13","resp","Responsável pela conferência","text",d)}${fld("d13","qtd","Nº de empregados","number",d)}${fld("d13","comp","Competência / folha","text",d,"Ex.: 13º 2026")}
+    ${fld("d13","dt1","Pagamento previsto da 1ª parcela","date",d,"Limite: 30/11/2026")}${fld("d13","dt2","Pagamento previsto da 2ª parcela","date",d,"Limite: 18/12/2026")}${fld("d13","dt3","Pagamento do ajuste (se houver)","date",d,"Limite: 08/01/2027")}
+    ${fld("d13","v1","Total bruto da 1ª parcela (R$)","number",d)}${fld("d13","v2","Total bruto do 13º integral (R$)","number",d)}${fld("d13","cct","Convenção coletiva / sindicato","text",d)}
+   </div>
+   <div class="alerts">${alerts13(d).map(a=>`<div class="al ${a[0]}"><span class="dot"></span><span>${a[1]}</span></div>`).join("")}</div>
+  </div>`+checklistHTML(CK13,"ck13","n13")+
+  `<div class="cta-band mtop no-print"><div><h3>Travou em algum item?</h3><p>Na Imersão 13º e Férias Coletivas eu faço cada cálculo com você, com os números de 2026.</p></div><a class="btn" href="${IMERSAO_URL}" target="_blank" rel="noopener">Quero participar</a></div>`;
+}
+function alerts13(d){
+  const a=[];
+  const chk=(v,lim,label)=>{ if(!v) return; const x=parse(v), l=parse(lim); if(x>l) a.push(["bad",`${label} em ${br(x)}: depois do prazo (${br(l)}).`]); else if(!isBank(x)) a.push(["warn",`${label} em ${br(x)} (${DOW[x.getDay()]}): confirme se o banco processa nesse dia.`]); else a.push(["ok",`${label} em ${br(x)}: dentro do prazo.`]); };
+  chk(d.dt1,"2026-11-30","1ª parcela"); chk(d.dt2,"2026-12-18","2ª parcela"); chk(d.dt3,"2027-01-08","Ajuste");
+  if(!a.length) a.push(["info","Informe as datas previstas de pagamento para conferir os prazos automaticamente."]);
+  return a;
+}
+function fld(obj,k,label,type,src,help,cls=""){
+  const v=esc(src[k]??"");
+  return `<div class="f ${cls}"><label for="${obj}-${k}">${label}</label><input id="${obj}-${k}" type="${type}" ${type==="number"?'step="0.01"':""} data-obj="${obj}" data-k="${k}" value="${v}">${help?`<small>${help}</small>`:""}</div>`;
+}
+function sel(obj,k,label,opts,src,help,cls=""){
+  return `<div class="f ${cls}"><label for="${obj}-${k}">${label}</label><select id="${obj}-${k}" data-obj="${obj}" data-k="${k}">${opts.map(o=>{const [val,txt]=Array.isArray(o)?o:[o,o];return `<option value="${esc(val)}" ${String(src[k])===String(val)?"selected":""}>${esc(txt)}</option>`;}).join("")}</select>${help?`<small>${help}</small>`:""}</div>`;
+}
+
+/* ---------- FÉRIAS ---------- */
+function feriasCalc(){
+  const f=C().fer, out={alerts:[]};
+  const ini=parse(f.inicio), dias=Math.round(num(f.dias));
+  if(!ini||!dias) return out;
+  const dsr=f.dsr??"0";
+  out.ini=ini; out.dias=dias; out.fim=addDays(ini,dias-1); out.ret=addDays(ini,dias);
+  out.comLim=addDays(ini,-15); out.comRec=prevBank(out.comLim);
+  out.payLim=addDays(ini,-2); out.payRec=prevBank(out.payLim);
+  out.s2230i=new Date(ini.getFullYear(),ini.getMonth()+1,15);
+  out.s2230f=new Date(out.ret.getFullYear(),out.ret.getMonth()+1,15);
+  const A=out.alerts;
+  if(dias<10) A.push(["bad","Cada período de férias coletivas precisa ter <b>pelo menos 10 dias corridos</b> (art. 139, §1º)."]);
+  if(isRest(ini,dsr)) A.push(["bad",`O início (${br(ini)}) cai em <b>${holidayName(ini)||"dia de repouso (DSR)"}</b>. Escolha outro dia.`]);
+  else{ const n1=addDays(ini,1),n2=addDays(ini,2);
+    if(isRest(n1,dsr)||isRest(n2,dsr)){ const r=isRest(n1,dsr)?n1:n2; A.push(["bad",`Início vedado: ${br(ini)} está nos 2 dias que antecedem ${holidayName(r)?"o feriado de "+holidayName(r):"o DSR"} (${br(r)}). Art. 134, §3º.`]); }
+    else A.push(["ok",`Início em ${br(ini)} (${DOW[ini.getDay()]}) respeita o art. 134, §3º.`]); }
+  const hol=[]; for(let i=0;i<dias;i++){const d=addDays(ini,i); const h=holidayName(d); if(h) hol.push(br(d)+" ("+h+")");}
+  if(hol.length) A.push(["warn",`Feriados dentro do período: ${hol.join(", ")}. Tratamento escolhido: <b>${esc(f.feriadosTrat||"—")}</b>.`]);
+  const today=new Date(); today.setHours(0,0,0,0);
+  if(f.porte!=="me") A.push([today>out.comLim && !f.dtMte?"bad":"info",`Comunicar MTE e sindicato até <b>${br(out.comLim)}</b> (${DOW[out.comLim.getDay()]})${+out.comRec!==+out.comLim?` — recomendado enviar até ${br(out.comRec)}`:""}.`]);
+  else A.push(["info",`ME/EPP: dispensada do MTE. Comunique o sindicato e afixe o aviso até <b>${br(out.comLim)}</b>.`]);
+  if(f.dtMte){ const d=parse(f.dtMte); A.push([d<=out.comLim?"ok":"bad",`Comunicação ao MTE feita em ${br(d)}: ${d<=out.comLim?"dentro":"fora"} do prazo.`]); }
+  if(f.dtSind){ const d=parse(f.dtSind); A.push([d<=out.comLim?"ok":"bad",`Envio ao sindicato em ${br(d)}: ${d<=out.comLim?"dentro":"fora"} do prazo.`]); }
+  if(f.dtPag){ const d=parse(f.dtPag); A.push([d<=out.payLim?"ok":"bad",`Pagamento previsto em ${br(d)}: ${d<=out.payLim?"dentro":"fora"} do prazo de 2 dias antes (art. 145).`]); }
+  else A.push(["info",`Pagar as férias até <b>${br(out.payRec)}</b> (${DOW[out.payRec.getDay()]}).`]);
+  return out;
+}
+function empCalc(e){
+  const f=C().fer, ini=parse(f.inicio), dias=Math.round(num(f.dias))||0;
+  const ref=ini?addDays(ini,-1):null, adm=parse(e.adm);
+  const fx=FALTAS.find(x=>x[0]===e.faltas)||FALTAS[0];
+  let av=null, saldo;
+  if(e.sit==="afastado"||e.sit==="maternidade"){ return {av:"—",saldo:0,fer:0,lic:0,obs:e.sit==="afastado"?"Fora do comunicado: licença remunerada":"Licença-maternidade: fora das coletivas",rem:0,vf:0,terco:0,vl:0,total:0,licDias:0}; }
+  const months = adm&&ref ? (ref.getFullYear()-adm.getFullYear())*12+ref.getMonth()-adm.getMonth()-(ref.getDate()<adm.getDate()?0:0) : 99;
+  const lessThan12 = adm&&ref && addDays(new Date(adm.getFullYear()+1,adm.getMonth(),adm.getDate()),-1) > ref;
+  if(lessThan12){ av=avos(adm,ref); saldo=av*fx[2]; }
+  else saldo = e.saldo!==undefined && e.saldo!=="" ? num(e.saldo) : fx[3];
+  const ferD=Math.min(saldo,dias), lic=Math.max(0,dias-ferD);
+  const sal=num(e.sal), rem=sal+num(e.med);
+  const vf=rem/30*ferD, terco=vf/3, vl=rem/30*lic;
+  let obs="";
+  if(adm&&ini&&(ini-adm)/864e5<15&&adm<=ini) obs="Menos de 15 dias de casa: licença remunerada no período todo";
+  else if(lessThan12) obs=`${av}/12 avos · férias proporcionais; novo período aquisitivo no retorno`;
+  else if(saldo>dias) obs=`Restam ${String(saldo-dias).replace(".",",")} dias para gozo individual`;
+  return {av:av===null?"12+":av+"/12",saldo,fer:ferD,lic,licDias:lic,rem,vf,terco,vl,total:vf+terco+vl,obs,lessThan12};
+}
+function empTotals(){ return C().emps.reduce((a,e)=>{const r=empCalc(e);a.vf+=r.vf;a.terco+=r.terco;a.vl+=r.vl;a.total+=r.total;return a;},{vf:0,terco:0,vl:0,total:0}); }
+
+function viewFerias(){
+  const tab=S.ftab||"check", c=C();
+  const tabs=`<div class="tabs no-print">${[["check","Checklist"],["dados","Dados das coletivas"],["emps","Empregados e cálculos"]].map(t=>`<button data-ftab="${t[0]}" class="${tab===t[0]?"on":""}">${t[1]}</button>`).join("")}</div>`;
+  let body="";
+  if(tab==="check") body=checklistHTML(CKFER,"ckFer","nFer");
+  else if(tab==="dados") body=ferDados();
+  else body=ferEmps();
+  return head("FÉRIAS COLETIVAS 2026","Férias coletivas","Planeje o período, valide as datas automaticamente e calcule os valores de cada empregado.",`<div style="min-width:240px"><div class="progress"><i style="width:${pct(CKFER,c.ckFer)}%"></i></div><p class="muted" style="font-size:13px;margin-top:6px">Checklist ${pct(CKFER,c.ckFer)}% concluído</p></div>`)+tabs+body;
+}
+function ferDados(){
+  const f=C().fer, r=feriasCalc();
+  return `<div class="card"><h3 class="serif" style="font-size:22px;color:var(--navy);margin-bottom:12px">Período e abrangência</h3>
+   <div class="fgrid">
+    ${fld("fer","inicio","Data de início","date",f,"Sugestão 2026: 21/12 (segunda-feira)")}
+    ${fld("fer","dias","Dias corridos","number",f,"Mínimo de 10 dias por período")}
+    ${sel("fer","periodo","Período no ano",[["1","1º período"],["2","2º período"]],f,"Máximo de 2 períodos por ano")}
+    ${sel("fer","abrang","Abrangência",["Empresa toda","Estabelecimentos","Setores"],f)}
+    ${fld("fer","setores","Estabelecimentos / setores abrangidos","text",f,"","span2")}
+    ${sel("fer","porte","Porte da empresa",[["normal","Demais empresas"],["me","ME ou EPP (dispensa do MTE)"]],f)}
+    ${sel("fer","dsr","Dia de repouso semanal (DSR)",[["0","Domingo"],["6","Sábado"],["1","Segunda-feira"]],f)}
+    ${fld("fer","feriadosMun","Feriados municipais/estaduais","text",f,"Datas separadas por vírgula. Ex.: 08/12/2026","span2")}
+   </div></div>
+   <div class="card mtop"><h3 class="serif" style="font-size:22px;color:var(--navy);margin-bottom:12px">Resultado automático</h3>
+   ${r.ini?`<div class="res">
+     <div class="box"><div class="k">Período</div><div class="v">${br(r.ini)} a ${br(r.fim)}</div><div class="s">${r.dias} dias corridos</div></div>
+     <div class="box"><div class="k">Retorno</div><div class="v">${br(r.ret)}</div><div class="s">${DOW[r.ret.getDay()]}</div></div>
+     <div class="box"><div class="k">Comunicar até</div><div class="v">${br(r.comLim)}</div><div class="s">${+r.comRec!==+r.comLim?"Recomendado: "+br(r.comRec):DOW[r.comLim.getDay()]}</div></div>
+     <div class="box"><div class="k">Pagar até</div><div class="v">${br(r.payRec)}</div><div class="s">Art. 145 · ${DOW[r.payRec.getDay()]}</div></div>
+     <div class="box"><div class="k">S-2230 início</div><div class="v">${br(r.s2230i)}</div><div class="s">Até o dia 15 do mês seguinte</div></div>
+     <div class="box"><div class="k">S-2230 término</div><div class="v">${br(r.s2230f)}</div><div class="s">Mês seguinte ao retorno</div></div>
+     <div class="box"><div class="k">Licença remunerada</div><div class="v">Folha de ${MONTHS[r.ini.getMonth()].toLowerCase()}</div><div class="s">Até o 5º dia útil seguinte</div></div>
+     <div class="box"><div class="k">Empregados</div><div class="v">${C().emps.length}</div><div class="s">Cadastrados na aba Empregados</div></div>
+   </div>
+   <div class="alerts">${r.alerts.map(a=>`<div class="al ${a[0]}"><span class="dot"></span><span>${a[1]}</span></div>`).join("")}</div>
+   <button class="btn mtop" id="toCal">Adicionar estes prazos ao calendário</button>`:`<p class="muted">Informe a data de início e os dias corridos.</p>`}
+   </div>
+   <div class="card mtop"><h3 class="serif" style="font-size:22px;color:var(--navy);margin-bottom:12px">Comunicações e pagamento</h3>
+   <div class="fgrid">
+    ${fld("fer","dtMte","Data da comunicação ao MTE","date",f)}${fld("fer","protMte","Protocolo / comprovante MTE","text",f)}${fld("fer","dtSind","Data do envio ao sindicato","date",f)}
+    ${fld("fer","sindicato","Sindicato da categoria","text",f)}${fld("fer","dtAviso","Data da afixação do aviso","date",f)}${fld("fer","dtPag","Data prevista do pagamento","date",f)}
+   </div></div>
+   <div class="card mtop"><h3 class="serif" style="font-size:22px;color:var(--navy);margin-bottom:12px">Convenção coletiva e observações</h3>
+   <div class="fgrid">
+    ${sel("fer","feriadosTrat","Feriados de 25/12 e 01/01 no período",["Conforme convenção coletiva","Contam como dias de férias","Compensar em dias trabalhados","Pagar na folha do mês"],f)}
+    ${sel("fer","contagem","Contagem dos dias",["Dias corridos (regra geral)","Outra regra prevista em norma coletiva (art. 611-A)"],f)}
+    ${sel("fer","abono","Abono pecuniário nas coletivas",["Não previsto","Previsto em acordo coletivo (art. 143, §2º)"],f)}
+    ${fld("fer","resp","Responsável","text",f)}${fld("fer","contato","Contato no cliente","text",f)}${fld("fer","emendadas","Empregados com férias individuais emendadas","text",f)}
+    <div class="f span3"><label for="fer-obs">Observações gerais</label><textarea id="fer-obs" rows="3" data-obj="fer" data-k="obs" style="border:1.5px solid var(--line);border-radius:9px;padding:9px 11px">${esc(f.obs||"")}</textarea></div>
+   </div></div>`;
+}
+function ferEmps(){
+  const c=C(), f=c.fer, t=empTotals();
+  const rows=c.emps.map(e=>{ const r=empCalc(e); return `<tr data-emp="${e.id}">
+    <td><input data-ef="nome" value="${esc(e.nome||"")}" placeholder="Nome" style="min-width:150px"></td>
+    <td><input data-ef="setor" value="${esc(e.setor||"")}" placeholder="Setor" style="min-width:90px"></td>
+    <td><input type="date" data-ef="adm" value="${esc(e.adm||"")}"></td>
+    <td><select data-ef="sit" style="min-width:150px">${[["ativo","Ativo"],["afastado","Afastado/atestado"],["maternidade","Licença-maternidade"]].map(o=>`<option value="${o[0]}" ${e.sit===o[0]?"selected":""}>${o[1]}</option>`).join("")}</select></td>
+    <td><select data-ef="faltas" style="min-width:150px">${FALTAS.map(o=>`<option value="${o[0]}" ${e.faltas===o[0]?"selected":""}>${o[1]}</option>`).join("")}</select></td>
+    <td>${r.lessThan12?`<span class="pill">${r.av}</span>`:`<input type="number" step="0.5" data-ef="saldo" value="${esc(e.saldo??"")}" placeholder="${FALTAS.find(x=>x[0]===e.faltas)?.[3]??30}" style="width:70px">`}</td>
+    <td><input type="number" step="0.01" data-ef="sal" value="${esc(e.sal||"")}" placeholder="0,00" style="width:100px"></td>
+    <td><input type="number" step="0.01" data-ef="med" value="${esc(e.med||"")}" placeholder="0,00" style="width:90px"></td>
+    <td class="calc">${String(r.fer).replace(".",",")}</td><td class="calc terra">${String(r.lic).replace(".",",")}</td>
+    <td class="calc">${money(r.vf)}</td><td class="calc">${money(r.terco)}</td><td class="calc">${money(r.vl)}</td><td class="calc">${money(r.total)}</td>
+    <td style="font-size:12px;color:var(--muted);min-width:180px">${esc(r.obs)}</td>
+    <td><button class="del" data-del="${e.id}" title="Remover">×</button></td></tr>`; }).join("");
+  return `<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px">
+    <div><h3 class="serif" style="font-size:22px;color:var(--navy)">Empregados nas coletivas</h3><p class="muted" style="font-size:13px">Período: ${f.inicio?br(parse(f.inicio)):"—"} · ${num(f.dias)||"—"} dias. Para quem tem menos de 12 meses, os dias proporcionais são calculados pela admissão e pelas faltas.</p></div>
+    <button class="btn sm" id="addEmp">+ Adicionar empregado</button></div>
+    <div class="tbl-wrap"><table><thead><tr><th>Nome</th><th>Setor</th><th>Admissão</th><th>Situação</th><th>Faltas no período</th><th>Saldo (dias)</th><th>Salário</th><th>Médias</th><th>Dias férias</th><th>Licença rem.</th><th>Férias</th><th>1/3</th><th>Licença (R$)</th><th>Total bruto</th><th>Observação</th><th></th></tr></thead>
+    <tbody>${rows||`<tr><td colspan="16" style="padding:22px;text-align:center;color:var(--muted)">Nenhum empregado ainda. Clique em “Adicionar empregado”.</td></tr>`}</tbody>
+    ${c.emps.length?`<tfoot><tr><td colspan="10">Totais</td><td class="calc">${money(t.vf)}</td><td class="calc">${money(t.terco)}</td><td class="calc">${money(t.vl)}</td><td class="calc">${money(t.total)}</td><td colspan="2"></td></tr></tfoot>`:""}</table></div>
+    <div class="tip"><b>Como ler:</b> valores brutos, sem INSS, IRRF e FGTS. Saldo = dias de férias disponíveis (para quem tem 12 meses ou mais, informe o saldo; o padrão segue a faixa de faltas). O excedente das coletivas vira licença remunerada, paga na folha do mês.</div></div>`;
+}
+
+/* ---------- CALENDÁRIO ---------- */
+function viewCal(){
+  if(!S.calM){ const t=new Date(); S.calM=t.getFullYear()+"-"+pad(t.getMonth()+1); }
+  const [y,m]=S.calM.split("-").map(Number); const first=new Date(y,m-1,1);
+  const start=addDays(first,-first.getDay()); const filt=S.calF||{};
+  const evs=C().events.filter(e=>!filt[e.cat]);
+  const dsr=C().fer.dsr??"0"; const todayK=iso(new Date());
+  let cells=DOWS.map(d=>`<div class="dow">${d}</div>`).join("");
+  for(let i=0;i<42;i++){ const d=addDays(start,i), k=iso(d), out=d.getMonth()!==m-1; const de=evs.filter(e=>e.date===k);
+    if(i>=35 && out && d.getDate()<8 && addDays(start,35).getMonth()!==m-1) break;
+    const h=holidayName(d);
+    cells+=`<div class="day ${out?"out":""} ${isRest(d,dsr)?"rest":""} ${k===todayK?"today":""}" data-day="${k}"><div class="n">${d.getDate()}${h?`<em>${esc(h)}</em>`:""}</div>${de.slice(0,3).map(e=>`<div class="ev c-${e.cat} ${e.done?"done":""}" data-ev="${e.id}" title="${esc(e.title)}">${esc(e.title)}</div>`).join("")}${de.length>3?`<div class="more">+${de.length-3}</div>`:""}</div>`; }
+  const monthEv=evs.filter(e=>e.date.startsWith(S.calM)).sort((a,b)=>a.date.localeCompare(b.date));
+  return head("CALENDÁRIO DO FECHAMENTO","Calendário de prazos e anotações","As principais datas de 2026/2027 já estão marcadas. Clique em um dia para anotar, ou em um compromisso para editar, concluir ou excluir.")+
+  `<div class="cal-top"><button class="btn ghost sm" data-mv="-1">‹</button><h3>${MONTHS[m-1]} ${y}</h3><button class="btn ghost sm" data-mv="1">›</button><button class="btn ghost sm" data-mv="0">Hoje</button><span style="flex:1"></span><button class="btn sm" id="newEv">+ Nova anotação</button></div>
+   <div class="legend no-print" style="margin-bottom:14px">${Object.entries(CATS).map(([k,v])=>`<label><input type="checkbox" data-cf="${k}" ${filt[k]?"":"checked"}><i class="c-${k}"></i>${v}</label>`).join("")}</div>
+   <div class="cal-wrap"><div class="cal">${cells}</div>
+   <div class="card agenda"><h3 class="serif" style="font-size:22px;color:var(--navy);margin-bottom:6px">${MONTHS[m-1]}: compromissos</h3>${monthEv.length?monthEv.map(agendaItem).join(""):`<p class="muted">Nada marcado neste mês.</p>`}
+   <button class="btn ghost sm mtop" id="resetSeed">Restaurar datas padrão</button></div></div>`;
+}
+let editing=null;
+function openEv(id,date){
+  const e=id?C().events.find(x=>x.id===id):null; editing=e?e.id:null;
+  $("#evTitle").textContent=e?"Editar compromisso":"Nova anotação";
+  $("#evCat").innerHTML=Object.entries(CATS).map(([k,v])=>`<option value="${k}">${v}</option>`).join("");
+  $("#evName").value=e?e.title:""; $("#evDate").value=e?e.date:(date||iso(new Date())); $("#evCat").value=e?e.cat:"nota";
+  $("#evNotes").value=e?e.notes||"":""; $("#evDone").checked=e?!!e.done:false; $("#evDel").style.visibility=e?"visible":"hidden";
+  $("#evModal").classList.add("on"); setTimeout(()=>$("#evName").focus(),50);
+}
+function closeEv(){ $("#evModal").classList.remove("on"); editing=null; }
+
+/* ================= EVENTOS ================= */
+function bind(){
+  const m=$("#main");
+  m.querySelectorAll("[data-ck]").forEach(i=>i.onchange=()=>{ C()[i.dataset.ck][i.dataset.k]=i.checked; save(); const y=window.scrollY; render(); window.scrollTo(0,y); });
+  m.querySelectorAll("[data-note]").forEach(t=>t.oninput=()=>{ C()[t.dataset.note][t.dataset.k]=t.value; save(); });
+  m.querySelectorAll(".sec-h").forEach(h=>h.onclick=()=>{ const s=h.parentElement, k=s.dataset.sec; S.closed=S.closed||{}; S.closed[k]=!S.closed[k]; s.classList.toggle("closed"); save(); });
+  m.querySelectorAll("[data-obj]").forEach(inp=>{
+    const live = inp.tagName==="TEXTAREA" || (inp.type==="text"&&inp.dataset.k!=="feriadosMun") || inp.type==="number" && inp.dataset.obj==="d13";
+    inp.addEventListener(live?"input":"change",()=>{ C()[inp.dataset.obj][inp.dataset.k]=inp.value; save(); if(!live){ const y=window.scrollY; render(); window.scrollTo(0,y);} });
+  });
+  m.querySelectorAll("[data-ftab]").forEach(b=>b.onclick=()=>{ S.ftab=b.dataset.ftab; save(); render(); });
+  const te=$("#toCal"); if(te) te.onclick=()=>{ const r=feriasCalc(); const c=C(); c.events=c.events.filter(e=>e.src!=="auto"&&e.src!=="seedfer");
+    const add=(d,t,cat,n)=>c.events.push({id:uid(),date:iso(d),title:t,cat,notes:n,done:false,src:"auto"});
+    add(r.comRec,"Comunicar coletivas: MTE, sindicato e aviso","ferias",`Prazo legal: ${br(r.comLim)}.`);
+    add(r.payRec,"Pagar férias coletivas","ferias",`Art. 145: até 2 dias antes do início (${br(r.ini)}).`);
+    add(r.ini,"Início das férias coletivas","ferias",`${r.dias} dias, até ${br(r.fim)}.`);
+    add(r.ret,"Retorno das férias coletivas","ferias","");
+    add(r.s2230i,"S-2230: início das férias coletivas","esocial","Até o dia 15 do mês seguinte ao início.");
+    add(r.s2230f,"S-2230: término das férias coletivas","esocial","Até o dia 15 do mês seguinte ao retorno.");
+    save(); toast("Prazos adicionados ao calendário"); };
+  const ae=$("#addEmp"); if(ae) ae.onclick=()=>{ C().emps.push({id:uid(),sit:"ativo",faltas:"0-5"}); save(); render(); };
+  m.querySelectorAll("tr[data-emp]").forEach(tr=>{ const e=C().emps.find(x=>x.id===tr.dataset.emp);
+    tr.querySelectorAll("[data-ef]").forEach(inp=>inp.addEventListener("change",()=>{ e[inp.dataset.ef]=inp.value; save(); const y=window.scrollY; render(); window.scrollTo(0,y); })); });
+  m.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{ if(confirmDel("Remover este empregado?")){ C().emps=C().emps.filter(x=>x.id!==b.dataset.del); save(); render(); }});
+  m.querySelectorAll("[data-mv]").forEach(b=>b.onclick=()=>{ const v=Number(b.dataset.mv); if(!v){const t=new Date(); S.calM=t.getFullYear()+"-"+pad(t.getMonth()+1);} else { const [y,mm]=S.calM.split("-").map(Number); const d=new Date(y,mm-1+v,1); S.calM=d.getFullYear()+"-"+pad(d.getMonth()+1);} save(); render(); });
+  m.querySelectorAll("[data-cf]").forEach(c=>c.onchange=()=>{ S.calF=S.calF||{}; S.calF[c.dataset.cf]=!c.checked; save(); render(); });
+  m.querySelectorAll(".day").forEach(d=>d.onclick=ev=>{ if(ev.target.closest("[data-ev]")) return; openEv(null,d.dataset.day); });
+  m.querySelectorAll("[data-ev]").forEach(e=>e.onclick=ev=>{ ev.stopPropagation(); const evn=C().events.find(x=>x.id===e.dataset.ev); if(evn){ if(S.view!=="cal"){ S.calM=evn.date.slice(0,7);} openEv(evn.id); } });
+  const ne=$("#newEv"); if(ne) ne.onclick=()=>openEv(null,S.calM+"-01");
+  const rs=$("#resetSeed"); if(rs) rs.onclick=()=>{ const c=C(); SEED.forEach(s=>{ if(!c.events.some(e=>e.date===s[0]&&e.title===s[1])) c.events.push({id:uid(),date:s[0],title:s[1],cat:s[2],notes:s[3],done:false}); }); save(); render(); toast("Datas padrão restauradas"); };
+}
+function confirmDel(msg){ return window.confirm(msg); }
+
+$("#evSave").onclick=()=>{ const t=$("#evName").value.trim(), d=$("#evDate").value; if(!t||!d){ toast("Informe título e data"); return; }
+  const c=C(); let e=editing?c.events.find(x=>x.id===editing):null;
+  if(!e){ e={id:uid()}; c.events.push(e); }
+  Object.assign(e,{title:t,date:d,cat:$("#evCat").value,notes:$("#evNotes").value,done:$("#evDone").checked});
+  closeEv(); save(); render(); toast("Salvo"); };
+$("#evDel").onclick=()=>{ if(editing&&confirmDel("Excluir este compromisso?")){ C().events=C().events.filter(x=>x.id!==editing); closeEv(); save(); render(); } };
+$("#evCancel").onclick=closeEv;
+$("#evModal").onclick=e=>{ if(e.target.id==="evModal") closeEv(); };
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeEv(); });
+
+$("#nav").onclick=e=>{ const b=e.target.closest("button"); if(b) setView(b.dataset.v); };
+$("#menuBtn").onclick=()=>$("#side").classList.toggle("open");
+$("#companySel").onchange=e=>{ S.active=e.target.value; save(); render(); };
+$("#addCompany").onclick=()=>{ const n=prompt("Nome da empresa ou cliente:"); if(!n) return; const id=uid(); S.companies[id]=newCompany(n.trim()); S.active=id; save(); render(); toast("Empresa criada"); };
+$("#renCompany").onclick=()=>{ const n=prompt("Novo nome:",C().name); if(!n) return; C().name=n.trim(); save(); render(); };
+$("#delCompany").onclick=()=>{ if(Object.keys(S.companies).length<2){ toast("Mantenha pelo menos uma empresa"); return; } if(confirmDel(`Excluir "${C().name}" e todos os dados dela?`)){ delete S.companies[S.active]; S.active=Object.keys(S.companies)[0]; save(); render(); } };
+$("#printBtn").onclick=()=>window.print();
+$("#exportBtn").onclick=()=>{ const b=new Blob([JSON.stringify(S,null,2)],{type:"application/json"}); const a=document.createElement("a"); a.href=URL.createObjectURL(b); a.download="fechamento-2026-backup.json"; a.click(); URL.revokeObjectURL(a.href); };
+$("#importFile").onchange=e=>{ const f=e.target.files[0]; if(!f) return; const r=new FileReader(); r.onload=()=>{ try{ const d=JSON.parse(r.result); if(!d.companies) throw 0; S=d; save(); render(); toast("Backup importado"); }catch(x){ toast("Arquivo inválido"); } }; r.readAsText(f); e.target.value=""; };
+
+/* ================= HORA PRÁTICA ================= */
+const r2 = x => Math.round(Number((x*100).toPrecision(12)))/100;
+const fmt = v => (v===null||v===undefined||!isFinite(v)) ? "—" : v.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
+const INSS_T = [[1621.00,0.075,0],[2902.84,0.09,24.32],[4354.27,0.12,111.40],[8475.55,0.14,198.49]];
+const IR_T = [[2428.80,0,0],[2826.65,0.075,182.16],[3751.05,0.15,394.16],[4664.68,0.225,675.49],[Infinity,0.275,908.73]];
+const DEP=189.59, SIMPL=607.20, TETO=8475.55;
+function inssCalc(b){
+  if(b<=0) return {v:0,txt:"Sem base"};
+  const base=Math.min(b,TETO); const f=INSS_T.find(x=>base<=x[0]);
+  const v=r2(base*f[1]-f[2]);
+  return {v, txt:`${fmt(base)} × ${String(f[1]*100).replace(".",",")}% − ${fmt(f[2])}${b>TETO?" (limitado ao teto)":""}`};
+}
+function irrfCalc(bruto,inss,dep){
+  if(bruto<=0) return {v:0,ded:0,base:0,tab:0,red:0,usa:"—"};
+  const legal=r2(inss+dep*DEP), usaS=SIMPL>legal, ded=usaS?SIMPL:legal;
+  const base=Math.max(0,r2(bruto-ded)); const f=IR_T.find(x=>base<=x[0]);
+  const tab=Math.max(0,r2(base*f[1]-f[2]));
+  let red=0, redTxt="";
+  if(bruto<=5000){ red=Math.min(tab,312.89); redTxt="Bruto até R$ 5.000: redução até R$ 312,89"; }
+  else if(bruto<=7350){ red=Math.min(tab,Math.max(0,r2(978.62-0.133145*bruto))); redTxt=`978,62 − (0,133145 × ${fmt(bruto)})`; }
+  else redTxt="Bruto acima de R$ 7.350: sem redução";
+  return {v:r2(tab-red),ded,base,tab,red,usa:usaS?"Desconto simplificado (607,20)":`INSS${dep?" + "+dep+" dependente(s)":""}`,aliq:f[1],parc:f[2],redTxt};
+}
+function parseBR(s){ s=String(s).trim().replace(/^R\$\s*/,""); if(s.includes(",")) s=s.replace(/\./g,"").replace(",","."); const n=parseFloat(s); return isFinite(n)?n:0; }
+function pState(k,def){ const c=C(); c[k]=c[k]||JSON.parse(JSON.stringify(def)); return c[k]; }
+
+/* ---------- 13º ---------- */
+const P13_DEF={sal:"",adm:"",desl:"",dep:0,modo:"nenhum",m1:"",m2:"",m3:"",var:Array(12).fill(""),dsr:Array(12).fill(""),off:[],p1pago:"",desafio:false,seu:{}};
+const P13_EX={
+  a:["Admitido em 02/12/2025 · R$ 1.621,00",{sal:"1621",adm:"2025-12-02"}],
+  b:["Admitido em 01/03/2026 · R$ 1.621,00",{sal:"1621",adm:"2026-03-01"}],
+  c:["Admissão 05/10/2021 · R$ 2.500,00",{sal:"2500",adm:"2021-10-05"}],
+  d:["Admissão 01/05/2026 · R$ 4.500,00",{sal:"4500",adm:"2026-05-01"}],
+  e:["Admissão 13/04/2026 · R$ 5.500,00 (redutor)",{sal:"5500",adm:"2026-04-13"}],
+  f:["13º de R$ 6.500,00 (redução parcial)",{sal:"6500",adm:"2024-01-02"}],
+  g:["13º de R$ 9.000,00 (teto do INSS)",{sal:"9000",adm:"2024-01-02"}],
+  h:["Horas extras: R$ 3.700 + HE e DSR mês a mês",{sal:"3700",adm:"2025-12-02",modo:"mensal",var:["227.07","201.84","100.92","126.15","176.61","227.07","252.30","201.84","151.38","126.15","378.45","504.60"],dsr:["43.67","33.64","19.41","31.54","42.39","34.93","37.38","38.82","30.28","24.26","115.18","97.04"]}],
+  i:["Admitido em 01/02/2026: R$ 2.200 + médias prontas",{sal:"2200",adm:"2026-02-01",modo:"pronta",m1:"325",m2:"350",m3:"375"}]
+};
+function monthsActive(p){
+  const adm=parse(p.adm), desl=parse(p.desl); const act=[];
+  for(let m=0;m<12;m++){
+    const ini=new Date(2026,m,1), fim=new Date(2026,m+1,0);
+    const a=adm&&adm>ini?adm:ini, b=desl&&desl<fim?desl:fim;
+    const dias=b>=a?Math.round((b-a)/864e5)+1:0;
+    act.push(dias>=15 && !(p.off||[]).includes(m));
+  }
+  return act;
+}
+function calc13(p){
+  const sal=num(p.sal), dep=Math.max(0,Math.round(num(p.dep))); const act=monthsActive(p); const avos=act.filter(Boolean).length;
+  let m=[0,0,0], mtxt=["","",""];
+  if(p.modo==="pronta"){ m=[num(p.m1),num(p.m2),num(p.m3)]; mtxt=["média informada","média informada","média informada"]; }
+  else if(p.modo==="mensal"){
+    [10,11,12].forEach((k,i)=>{ let sv=0,sd=0,n=0; for(let j=0;j<k;j++) if(act[j]){ sv+=num(p.var[j]); sd+=num(p.dsr[j]); n++; }
+      const mv=n?r2(sv/n):0, md=n?r2(sd/n):0; m[i]=r2(mv+md); mtxt[i]=n?`variáveis ${fmt(sv)} ÷ ${n} = ${fmt(mv)} · DSR ${fmt(sd)} ÷ ${n} = ${fmt(md)}`:"sem meses no período"; });
+  }
+  const R={avos,act,m,mtxt};
+  R.int1=r2((sal+m[0])/12*avos); R.p1=r2(R.int1/2);
+  R.p1pago=p.p1pago!==""&&p.p1pago!==undefined?num(p.p1pago):R.p1;
+  R.int2=r2((sal+m[1])/12*avos); R.inss2=inssCalc(R.int2); R.ir2=irrfCalc(R.int2,R.inss2.v,dep);
+  R.liq2=r2(R.int2-R.p1pago-R.inss2.v-R.ir2.v);
+  R.temVar=p.modo!=="nenhum";
+  if(R.temVar){ R.int3=r2((sal+m[2])/12*avos); R.dif=r2(R.int3-R.int2); const i3=inssCalc(R.int3), ir3=irrfCalc(R.int3,i3.v,dep);
+    R.inss3=r2(i3.v-R.inss2.v); R.ir3=r2(ir3.v-R.ir2.v); R.liq3=r2(R.dif-R.inss3-R.ir3); }
+  return R;
+}
+function rowCk(key,label,formula,val,p,opts={}){
+  const seu=p.seu[key]; const has=seu!==undefined&&seu!=="";
+  let st=""; if(has&&val!==null){ const d=r2(parseBR(seu)-val); st=Math.abs(d)<=0.01?`<span class="st ok">✓ Correto</span>`:`<span class="st bad">✗ Diferença ${fmt(d)}</span>`; }
+  const hide=p.desafio&&!opts.always;
+  return `<div class="crow ${opts.total?"tot":""}"><div class="cl"><b>${label}</b>${formula&&!hide?`<small>${formula}</small>`:""}</div>
+    <div class="cv">${hide?`<span class="hid">●●●</span>`:(opts.raw??("R$ "+fmt(val)))}</div>
+    ${opts.noCheck?`<div></div><div></div>`:`<input class="seu" inputmode="decimal" placeholder="Seu valor" data-seu="${key}" value="${esc(seu??"")}"><div>${st}</div>`}</div>`;
+}
+function viewP13(){
+  const p=pState("p13",P13_DEF); const R=calc13(p);
+  const chips=MONTHS.map((mm,i)=>`<button class="mchip ${R.act[i]?"on":""} ${(p.off||[]).includes(i)?"off":""}" data-moff="${i}" title="Clique para desconsiderar este mês (faltas ou afastamento pelo INSS)">${mm.slice(0,3)}</button>`).join("");
+  const varRows=p.modo==="mensal"?`<div class="tbl-wrap mtop"><table style="min-width:560px"><thead><tr><th>Mês/2026</th><th>Variáveis (HE, adicionais, comissões)</th><th>DSR sobre variáveis</th><th>Considera?</th></tr></thead><tbody>${MONTHS.map((mm,i)=>`<tr><td><b>${mm}</b></td><td><input type="number" step="0.01" data-pvar="${i}" value="${esc(p.var[i])}" placeholder="0,00"></td><td><input type="number" step="0.01" data-pdsr="${i}" value="${esc(p.dsr[i])}" placeholder="0,00"></td><td>${R.act[i]?'<span class="pill" style="background:#E7F4EC;color:#14532D">Sim</span>':'<span class="pill">Não</span>'}</td></tr>`).join("")}</tbody></table></div>`:"";
+  const pronta=p.modo==="pronta"?`<div class="fgrid mtop">${pf("p13","m1","Média para a 1ª parcela (jan–out)",p)}${pf("p13","m2","Média para a 2ª parcela (jan–nov)",p)}${pf("p13","m3","Média para o ajuste (jan–dez)",p)}</div>`:"";
+  const exBtns=Object.entries(P13_EX).map(([k,v])=>`<button class="exbtn" data-ex13="${k}">${v[0]}</button>`).join("");
+  const ir=R.ir2;
+  return head("HORA PRÁTICA · 13º SALÁRIO","Prática do 13º: calcule e confira","Preencha os dados do empregado (ou carregue um exemplo da imersão), faça o seu cálculo e digite os seus valores na coluna “Seu valor” para conferir.",`<label class="chk no-print" style="margin:0"><input type="checkbox" id="des13" ${p.desafio?"checked":""}> Modo desafio (esconder respostas)</label>`)+
+  `<div class="card no-print"><h3 class="serif h3c">Exemplos da imersão</h3><div class="exs">${exBtns}</div><button class="btn ghost sm mtop" data-clear="p13">Limpar e começar do zero</button></div>
+  <div class="card mtop"><h3 class="serif h3c">Dados do empregado</h3>
+    <div class="fgrid">${pf("p13","sal","Salário de dezembro (R$)",p,"number")}${pf("p13","adm","Data de admissão",p,"date")}${pf("p13","desl","Data de desligamento (se houver)",p,"date","Para 13º proporcional na rescisão")}
+    ${pf("p13","dep","Dependentes para IRRF",p,"number")}${psel("p13","modo","Variáveis (HE, comissões etc.)",[["nenhum","Não recebe variáveis"],["mensal","Lançar mês a mês (HE e DSR)"],["pronta","Já tenho as médias"]],p)}${pf("p13","p1pago","1ª parcela efetivamente paga (R$)",p,"number","Deixe vazio para usar a calculada")}</div>
+    <div class="mtop"><label class="lbl2">Avos de 2026 · ${R.avos}/12</label><div class="mchips">${chips}</div><small class="muted">Os meses com 15 dias ou mais são marcados automaticamente pela admissão e pelo desligamento. Clique num mês para desconsiderá-lo (faltas que deixaram menos de 15 dias trabalhados ou afastamento pelo INSS).</small></div>
+    ${varRows}${pronta}
+  </div>
+  <div class="card mtop"><h3 class="serif h3c">1ª parcela · até 30/11/2026</h3>
+    ${rowCk("avos","Avos de direito","Meses com 15 dias ou mais em 2026",R.avos,p,{raw:R.avos+"/12",noCheck:false})}
+    ${R.temVar?rowCk("m1","Média das variáveis (÷ meses de jan a out)",R.mtxt[0],R.m[0],p):""}
+    ${rowCk("int1","13º proporcional","(salário "+fmt(num(p.sal))+(R.temVar?" + média "+fmt(R.m[0]):"")+") ÷ 12 × "+R.avos,R.int1,p)}
+    ${rowCk("p1","1ª parcela (sem INSS e IRRF)","13º proporcional ÷ 2",R.p1,p,{total:true})}
+  </div>
+  <div class="card mtop"><h3 class="serif h3c">2ª parcela · até 18/12/2026</h3>
+    ${R.temVar?rowCk("m2","Média das variáveis (÷ meses de jan a nov)",R.mtxt[1],R.m[1],p):""}
+    ${rowCk("int2","13º integral (bruto)","(salário"+(R.temVar?" + média "+fmt(R.m[1]):"")+") ÷ 12 × "+R.avos,R.int2,p)}
+    ${rowCk("p1d","(−) 1ª parcela paga","",R.p1pago,p)}
+    ${rowCk("inss2","(−) INSS do 13º",R.inss2.txt,R.inss2.v,p)}
+    ${rowCk("ded","Dedução usada no IRRF",ir.usa+" — o mais vantajoso",ir.ded,p)}
+    ${rowCk("base","Base de cálculo do IRRF",fmt(R.int2)+" − "+fmt(ir.ded),ir.base,p)}
+    ${rowCk("tab","IRRF pela tabela",ir.base>0?fmt(ir.base)+" × "+String((ir.aliq||0)*100).replace(".",",")+"% − "+fmt(ir.parc||0):"",ir.tab,p)}
+    ${rowCk("red","(−) Redutor Lei 15.270/2025",ir.redTxt,ir.red,p)}
+    ${rowCk("ir2","(−) IRRF devido","IR pela tabela − redutor",ir.v,p)}
+    ${rowCk("liq2","Líquido da 2ª parcela","integral − 1ª parcela − INSS − IRRF",R.liq2,p,{total:true})}
+  </div>
+  ${R.temVar?`<div class="card mtop"><h3 class="serif h3c">Ajuste das variáveis · até 08/01/2027</h3>
+    ${rowCk("m3","Média das variáveis (÷ meses de jan a dez)",R.mtxt[2],R.m[2],p)}
+    ${rowCk("int3","13º recalculado","(salário + média "+fmt(R.m[2])+") ÷ 12 × "+R.avos,R.int3,p)}
+    ${rowCk("dif","Diferença bruta","13º recalculado − 13º integral da 2ª parcela",R.dif,p)}
+    ${rowCk("inss3","(−) INSS complementar","INSS do 13º recalculado − INSS já descontado",R.inss3,p)}
+    ${rowCk("ir3","(−) IRRF complementar","IRRF do 13º recalculado − IRRF já descontado",R.ir3,p)}
+    ${rowCk("liq3","Líquido do ajuste (rubrica 5005)","",R.liq3,p,{total:true})}
+    ${R.dif<0?`<div class="al warn mtop"><span class="dot"></span><span>Diferença negativa: avalie a compensação (art. 77, parágrafo único, do Decreto 10.854/2021).</span></div>`:""}
+  </div>`:""}
+  ${p.desafio?`<div class="al info mtop"><span class="dot"></span><span>Modo desafio ativo: as respostas estão escondidas, mas a conferência dos seus valores continua funcionando. Desmarque o modo desafio para ver a memória de cálculo.</span></div>`:""}
+  <div class="tip mtop"><b>Regras usadas:</b> salário mínimo R$ 1.621,00 · INSS 2026 progressivo (teto R$ 8.475,55) · IRRF com o mais vantajoso entre o desconto simplificado (R$ 607,20) e INSS + dependentes (R$ 189,59) · redutor da Lei 15.270/2025 sobre o bruto do 13º. Pensão alimentícia e outras particularidades não entram no cálculo.</div>`;
+}
+
+/* ---------- FÉRIAS ---------- */
+const PF_DEF={tipo:"coletivas",sal:"",med:"",inicio:"2026-12-21",dias:14,direito:"adquirido",faltas:"0-5",saldo:"",adm:"",abono:0,dep:0,com:Array(12).fill(""),cdsr:Array(12).fill(""),showCom:false,desafio:false,seu:{}};
+const PF_EX={
+  joao:["João · R$ 2.300 · 30 dias adquiridos · 14 dias de coletivas",{sal:"2300",direito:"adquirido",faltas:"0-5",dias:14,inicio:"2026-12-21"}],
+  maria:["Maria · R$ 3.500 · admitida em 01/09/2026 · 14 dias",{sal:"3500",direito:"proporcional",adm:"2026-09-01",faltas:"0-5",dias:14,inicio:"2026-12-21"}],
+  com:["Comissionista · R$ 3.800 + comissões · 14 dias",{sal:"3800",direito:"adquirido",dias:14,inicio:"2026-12-21",showCom:true,com:["350","650","500","580","700","900","1050","1600","850","350","750","340"],cdsr:["70","130","100","116","140","180","210","320","170","70","150","68"]}],
+  ind:["Férias individuais · R$ 4.200 · 20 dias + 10 de abono",{tipo:"individuais",sal:"4200",direito:"adquirido",dias:20,abono:10,inicio:"2027-01-11"}]
+};
+function comMedia(p){ let sc=0,sd=0,n=0; for(let i=0;i<12;i++){ if(p.com[i]!==""||p.cdsr[i]!==""){ sc+=num(p.com[i]); sd+=num(p.cdsr[i]); n++; } } const mc=n?r2(sc/n):0, md=n?r2(sd/n):0; return {mc,md,n,tot:r2(mc+md),sc,sd}; }
+function calcF(p){
+  const sal=num(p.sal), dep=Math.max(0,Math.round(num(p.dep)));
+  const cm=comMedia(p); const med=p.showCom&&cm.n?cm.tot:num(p.med);
+  const rem=r2(sal+med); const ini=parse(p.inicio); const dias=Math.max(0,Math.round(num(p.dias)));
+  const fx=FALTAS.find(x=>x[0]===p.faltas)||FALTAS[0];
+  let direito, av=null, dtxt;
+  if(p.direito==="proporcional"){ const adm=parse(p.adm); av=adm&&ini?avos(adm,addDays(ini,-1)):0; direito=av*fx[2]; dtxt=`${av}/12 avos × ${String(fx[2]).replace(".",",")} dias`; }
+  else if(p.saldo!==""&&p.saldo!==undefined){ direito=num(p.saldo); dtxt="saldo informado"; }
+  else { direito=fx[3]; dtxt=`${fx[1].toLowerCase()} no período aquisitivo`; }
+  const R={rem,med,cm,direito,av,dtxt,dias};
+  if(p.tipo==="coletivas"){ R.fer=Math.min(direito,dias); R.lic=Math.max(0,dias-R.fer); R.abono=0; }
+  else { R.abono=Math.min(num(p.abono),Math.floor(direito/3)); R.fer=Math.min(dias,direito-R.abono); R.lic=0; }
+  R.vf=r2(rem/30*R.fer); R.terco=r2(R.vf/3); R.bruto=r2(R.vf+R.terco);
+  R.inss=inssCalc(R.bruto); R.ir=irrfCalc(R.bruto,R.inss.v,dep);
+  R.liq=r2(R.bruto-R.inss.v-R.ir.v);
+  R.vab=r2(rem/30*R.abono); R.tab=r2(R.vab/3);
+  R.vl=r2(rem/30*R.lic);
+  R.fgts=r2((R.bruto+R.vl)*0.08);
+  if(ini){ R.fim=addDays(ini,R.fer+R.lic-1); R.ret=addDays(ini,R.fer+R.lic); R.pag=prevBank(addDays(ini,-2)); }
+  return R;
+}
+function viewPF(){
+  const p=pState("pfer",PF_DEF); const R=calcF(p);
+  const exBtns=Object.entries(PF_EX).map(([k,v])=>`<button class="exbtn" data-exf="${k}">${v[0]}</button>`).join("");
+  const comTbl=p.showCom?`<div class="tbl-wrap mtop"><table style="min-width:520px"><thead><tr><th>Mês (12 meses antes da concessão)</th><th>Comissão</th><th>DSR</th></tr></thead><tbody>${Array.from({length:12},(_,i)=>{const ini=parse(p.inicio)||new Date(2026,11,1); const d=new Date(ini.getFullYear(),ini.getMonth()-12+i,1); return `<tr><td><b>${MONTHS[d.getMonth()].slice(0,3).toLowerCase()}/${d.getFullYear()}</b></td><td><input type="number" step="0.01" data-pcom="${i}" value="${esc(p.com[i])}" placeholder="0,00"></td><td><input type="number" step="0.01" data-pcdsr="${i}" value="${esc(p.cdsr[i])}" placeholder="0,00"></td></tr>`;}).join("")}</tbody>
+   <tfoot><tr><td>Média (${R.cm.n} meses)</td><td class="calc">${fmt(R.cm.mc)}</td><td class="calc">${fmt(R.cm.md)}</td></tr></tfoot></table></div><small class="muted">Art. 142, §3º: comissões pela média dos 12 meses que antecedem a concessão. Média total usada: <b>R$ ${fmt(R.cm.tot)}</b>.</small>`:"";
+  return head("HORA PRÁTICA · FÉRIAS","Prática de férias: calcule e confira","Monte o cálculo de férias coletivas ou individuais, com proporcionais, médias, licença remunerada e abono, e confira os seus valores.",`<label class="chk no-print" style="margin:0"><input type="checkbox" id="desF" ${p.desafio?"checked":""}> Modo desafio (esconder respostas)</label>`)+
+  `<div class="card no-print"><h3 class="serif h3c">Exemplos da imersão</h3><div class="exs">${exBtns}</div><button class="btn ghost sm mtop" data-clear="pfer">Limpar e começar do zero</button></div>
+  <div class="card mtop"><h3 class="serif h3c">Dados das férias</h3>
+   <div class="fgrid">
+    ${psel("pfer","tipo","Tipo de férias",[["coletivas","Férias coletivas"],["individuais","Férias individuais"]],p)}
+    ${pf("pfer","inicio","Data de início",p,"date")}${pf("pfer","dias",p.tipo==="coletivas"?"Dias corridos das coletivas":"Dias de gozo",p,"number")}
+    ${pf("pfer","sal","Salário na data da concessão (R$)",p,"number")}
+    ${p.showCom?`<div class="f"><label>Médias de variáveis (R$)</label><input value="${fmt(R.cm.tot)} (tabela de comissões)" disabled></div>`:pf("pfer","med","Médias de variáveis (R$)",p,"number","HE, adicional noturno, comissões...")}
+    <div class="f"><label>Comissões mês a mês</label><button class="btn ghost sm" id="togCom" style="justify-content:center">${p.showCom?"Usar média pronta":"Calcular média de comissões"}</button></div>
+    ${psel("pfer","direito","Direito a férias",[["adquirido","Período aquisitivo completo"],["proporcional","Menos de 12 meses (proporcional)"]],p)}
+    ${p.direito==="proporcional"?pf("pfer","adm","Data de admissão",p,"date"):pf("pfer","saldo","Saldo de dias (opcional)",p,"number","Vazio: usa a faixa de faltas")}
+    ${psel("pfer","faltas","Faltas injustificadas no período",FALTAS.map(f=>[f[0],f[1]]),p)}
+    ${p.tipo==="individuais"?pf("pfer","abono","Dias de abono pecuniário",p,"number","Até 1/3 do direito (art. 143)"):""}
+    ${pf("pfer","dep","Dependentes para IRRF",p,"number")}
+   </div>${comTbl}</div>
+  <div class="card mtop"><h3 class="serif h3c">Dias</h3>
+    ${rowCk("dir","Dias de direito",R.dtxt,R.direito,p,{raw:String(R.direito).replace(".",",")+" dias"})}
+    ${rowCk("fer","Dias de férias pagos",p.tipo==="coletivas"?"menor valor entre o direito e os dias das coletivas":"dias de gozo",R.fer,p,{raw:String(R.fer).replace(".",",")+" dias"})}
+    ${p.tipo==="coletivas"?rowCk("licd","Dias de licença remunerada","dias das coletivas − dias de férias",R.lic,p,{raw:String(R.lic).replace(".",",")+" dias"}):rowCk("abd","Dias de abono","",R.abono,p,{raw:R.abono+" dias"})}
+    ${R.pag?`<div class="crow"><div class="cl"><b>Período e pagamento</b><small>Art. 145: até 2 dias antes do início</small></div><div class="cv" style="grid-column:span 3;text-align:left">${br(parse(p.inicio))} a ${br(R.fim)} · retorno ${br(R.ret)} · pagar até <b>${br(R.pag)}</b></div></div>`:""}
+  </div>
+  <div class="card mtop"><h3 class="serif h3c">Valores</h3>
+    ${rowCk("rem","Remuneração base","salário "+fmt(num(p.sal))+" + médias "+fmt(R.med),R.rem,p)}
+    ${rowCk("vf","Férias",fmt(R.rem)+" ÷ 30 × "+String(R.fer).replace(".",","),R.vf,p)}
+    ${rowCk("terco","(+) 1/3 constitucional","férias ÷ 3",R.terco,p)}
+    ${rowCk("bruto","Bruto de férias","férias + 1/3",R.bruto,p)}
+    ${rowCk("inss","(−) INSS",R.inss.txt,R.inss.v,p)}
+    ${rowCk("irb","Base do IRRF",fmt(R.bruto)+" − "+fmt(R.ir.ded)+" ("+R.ir.usa+")",R.ir.base,p)}
+    ${rowCk("irt","IRRF pela tabela","",R.ir.tab,p)}
+    ${rowCk("ired","(−) Redutor Lei 15.270/2025",R.ir.redTxt,R.ir.red,p)}
+    ${rowCk("ir","(−) IRRF devido","",R.ir.v,p)}
+    ${rowCk("liq","Líquido de férias","bruto − INSS − IRRF",R.liq,p,{total:true})}
+    ${R.abono?rowCk("vab","(+) Abono pecuniário (sem INSS/IRRF)",fmt(R.rem)+" ÷ 30 × "+R.abono+" + 1/3 ("+fmt(R.tab)+")",r2(R.vab+R.tab),p):""}
+    ${R.lic?rowCk("vl","Licença remunerada (folha do mês)",fmt(R.rem)+" ÷ 30 × "+String(R.lic).replace(".",","),R.vl,p):""}
+    ${rowCk("fgts","FGTS (8%) informativo","(bruto de férias + licença) × 8%",R.fgts,p,{noCheck:true})}
+  </div>
+  ${p.desafio?`<div class="al info mtop"><span class="dot"></span><span>Modo desafio ativo: as respostas estão escondidas, mas a conferência dos seus valores continua funcionando.</span></div>`:""}
+  <div class="tip mtop"><b>Para lembrar:</b> o INSS aqui é calculado só sobre as férias, como nos exemplos da imersão. Na folha, ele incide sobre o total da competência (férias + saldo de salário + licença). A licença remunerada também tem INSS, IRRF e FGTS e é paga na folha do mês. O abono pecuniário e o 1/3 sobre ele não têm INSS nem IRRF.</div>`;
+}
+
+/* ---------- campos e eventos ---------- */
+function pf(obj,k,label,src,type="text",help=""){
+  return `<div class="f"><label for="${obj}-${k}">${label}</label><input id="${obj}-${k}" type="${type}" ${type==="number"?'step="0.01"':""} data-pp="${obj}" data-k="${k}" value="${esc(src[k]??"")}">${help?`<small>${help}</small>`:""}</div>`;
+}
+function psel(obj,k,label,opts,src){
+  return `<div class="f"><label for="${obj}-${k}">${label}</label><select id="${obj}-${k}" data-pp="${obj}" data-k="${k}">${opts.map(o=>`<option value="${o[0]}" ${String(src[k])===String(o[0])?"selected":""}>${o[1]}</option>`).join("")}</select></div>`;
+}
+function rerender(){ const y=window.scrollY; render(); window.scrollTo(0,y); }
+function bindPratica(){
+  const m=$("#main"); const c=C();
+  m.querySelectorAll("[data-pp]").forEach(i=>i.addEventListener("change",()=>{ c[i.dataset.pp][i.dataset.k]=i.value; save(); rerender(); }));
+  m.querySelectorAll("[data-seu]").forEach(i=>i.addEventListener("change",()=>{ const o=S.view==="p13"?c.p13:c.pfer; o.seu[i.dataset.seu]=i.value.trim(); save(); rerender(); }));
+  m.querySelectorAll("[data-pvar]").forEach(i=>i.addEventListener("change",()=>{ c.p13.var[i.dataset.pvar]=i.value; save(); rerender(); }));
+  m.querySelectorAll("[data-pdsr]").forEach(i=>i.addEventListener("change",()=>{ c.p13.dsr[i.dataset.pdsr]=i.value; save(); rerender(); }));
+  m.querySelectorAll("[data-pcom]").forEach(i=>i.addEventListener("change",()=>{ c.pfer.com[i.dataset.pcom]=i.value; save(); rerender(); }));
+  m.querySelectorAll("[data-pcdsr]").forEach(i=>i.addEventListener("change",()=>{ c.pfer.cdsr[i.dataset.pcdsr]=i.value; save(); rerender(); }));
+  m.querySelectorAll("[data-moff]").forEach(b=>b.onclick=()=>{ const i=Number(b.dataset.moff); const o=c.p13.off||(c.p13.off=[]); const k=o.indexOf(i); if(k>=0) o.splice(k,1); else o.push(i); save(); rerender(); });
+  m.querySelectorAll("[data-ex13]").forEach(b=>b.onclick=()=>{ c.p13=Object.assign(JSON.parse(JSON.stringify(P13_DEF)),JSON.parse(JSON.stringify(P13_EX[b.dataset.ex13][1])),{desafio:c.p13.desafio}); save(); rerender(); toast("Exemplo carregado"); });
+  m.querySelectorAll("[data-exf]").forEach(b=>b.onclick=()=>{ c.pfer=Object.assign(JSON.parse(JSON.stringify(PF_DEF)),JSON.parse(JSON.stringify(PF_EX[b.dataset.exf][1])),{desafio:c.pfer.desafio}); save(); rerender(); toast("Exemplo carregado"); });
+  m.querySelectorAll("[data-clear]").forEach(b=>b.onclick=()=>{ const k=b.dataset.clear; c[k]=JSON.parse(JSON.stringify(k==="p13"?P13_DEF:PF_DEF)); save(); rerender(); });
+  const d1=$("#des13"); if(d1) d1.onchange=()=>{ c.p13.desafio=d1.checked; save(); rerender(); };
+  const d2=$("#desF"); if(d2) d2.onchange=()=>{ c.pfer.desafio=d2.checked; save(); rerender(); };
+  const tc=$("#togCom"); if(tc) tc.onclick=()=>{ c.pfer.showCom=!c.pfer.showCom; save(); rerender(); };
+}
+
+load(); render();
+</script>
+</body>
+</html>
